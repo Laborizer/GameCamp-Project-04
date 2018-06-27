@@ -35,4 +35,9 @@ public class CameraSwitch : MonoBehaviour {
             battleCam.enabled = false;
         }
     }
+
+    public void setInBattle(Boolean result)
+    {
+        inBattle = result;
+    }
 }
