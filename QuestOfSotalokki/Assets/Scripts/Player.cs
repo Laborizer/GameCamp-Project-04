@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
+    GameObject enemy;
+
     public float moveSpeed;
     public int healtPotionCount;
 
@@ -14,6 +16,7 @@ public class Player : MonoBehaviour {
 
 	void Start () {
         rb = GetComponent<Rigidbody>();
+        enemy = GameObject.Find("Enemy");
     }
 	
 	// Update is called once per frame
@@ -33,6 +36,14 @@ public class Player : MonoBehaviour {
         if (itemName == "HealtPotion")
         {
             healtPotionCount++;
+        }
+    }
+
+    private void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.name == "EnemyTalkBox")
+        {
+            enemy.GetComponent<Enemy>().SetBattle(true);
         }
     }
 }
