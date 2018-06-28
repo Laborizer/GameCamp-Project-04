@@ -1,10 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
 
     public float moveSpeed;
+    public int healtPotionCount;
 
     private Rigidbody rb;
     private Vector3 moveInput;
@@ -24,5 +26,13 @@ public class Player : MonoBehaviour {
         moveInput = new Vector3(Input.GetAxisRaw("Horizontal"),0f, Input.GetAxisRaw("Vertical"));
         moveVelocity = moveInput * moveSpeed;
         rb.velocity = moveVelocity;
+    }
+
+    internal void givePotion(string itemName)
+    {
+        if (itemName == "HealtPotion")
+        {
+            healtPotionCount++;
+        }
     }
 }
