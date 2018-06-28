@@ -24,4 +24,12 @@ public class ItemMenu : MonoBehaviour {
         attackPotionButton.GetComponentInChildren<Text>().text = "Attack potion x ";
         defensePotionButton.GetComponentInChildren<Text>().text = "Defense potion x ";
     }
+
+    public void useHealthPotion()
+    {
+        if(player.GetComponent<Player>().healtPotionCount > 0)
+        {
+            player.GetComponent<Player>().healtPotionCount--;
+        }
+    }
 }
