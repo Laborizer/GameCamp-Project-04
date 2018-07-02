@@ -4,19 +4,27 @@ using UnityEngine;
 
 public class VisionTrigger : MonoBehaviour {
 
+    GameObject player;
+
+    private void Start()
+    {
+        player = GameObject.Find("Player");
+    }
+
     private void OnTriggerEnter(Collider col)
     {
-        if(col.gameObject.name == "Player")
+        if(col.gameObject.tag == "PlayerTag")
         {
-            transform.parent.GetComponent<Enemy>().SetBattle(true);
+            transform.parent.GetComponent<Enemy>().SetWalk(true);
+            player.GetComponent<Player>().setMove(false);
         }
     }
 
     private void OnTriggerExit(Collider col)
     {
-        if (col.gameObject.name == "Player")
+        if (col.gameObject.tag == "PlayerTag")
         {
-            transform.parent.GetComponent<Enemy>().SetBattle(false);
+            transform.parent.GetComponent<Enemy>().SetWalk(false);
         }
     }
 }

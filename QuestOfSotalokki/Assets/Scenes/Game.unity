@@ -1824,6 +1824,10 @@ Prefab:
       propertyPath: m_Constraints
       value: 112
       objectReference: {fileID: 0}
+    - target: {fileID: 1302344456032604, guid: 80a02ff305361bf49baf90fb32280cf5, type: 2}
+      propertyPath: m_TagString
+      value: PlayerTag
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 80a02ff305361bf49baf90fb32280cf5, type: 2}
   m_IsPrefabParent: 0
@@ -3760,6 +3764,28 @@ Prefab:
         type: 2}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114448778094502390, guid: 0c22a0a318cdb574abe0b57b0b683451,
+        type: 2}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114448778094502390, guid: 0c22a0a318cdb574abe0b57b0b683451,
+        type: 2}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1555624423}
+    - target: {fileID: 1934432801661654, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454724151732032, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1046800298564866, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}

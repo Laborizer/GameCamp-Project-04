@@ -13,15 +13,20 @@ public class Player : MonoBehaviour {
     private Rigidbody rb;
     private Vector3 moveInput;
     private Vector3 moveVelocity;
+    private Boolean canMove;
 
 	void Start () {
+        canMove = true;
         rb = GetComponent<Rigidbody>();
         enemy = GameObject.Find("Enemy");
     }
-	
-	// Update is called once per frame
-	void FixedUpdate () {
-        Move();
+
+    // Update is called once per frame
+    void FixedUpdate () {
+        if (canMove)
+        {
+            Move();
+        }
 	}
 
     private void Move()
@@ -39,11 +44,12 @@ public class Player : MonoBehaviour {
         }
     }
 
-    private void OnCollisionEnter(Collision col)
+    internal void setMove(bool result)
     {
-        if (col.gameObject.name == "EnemyTalkBox")
+        canMove = result;
+        if (result == false)
         {
-            enemy.GetComponent<Enemy>().SetBattle(true);
+            rb.velocity = Vector3.zero;
         }
     }
 }
