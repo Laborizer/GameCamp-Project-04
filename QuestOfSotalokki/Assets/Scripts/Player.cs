@@ -8,7 +8,11 @@ public class Player : MonoBehaviour {
     GameObject enemy;
 
     public float moveSpeed;
+
     public int healtPotionCount;
+    public int manaPotionCount;
+    public int attackPotionCount;
+    public int defensePotionCount;
 
     private Rigidbody rb;
     private Vector3 moveInput;
@@ -41,6 +45,18 @@ public class Player : MonoBehaviour {
         if (itemName == "HealtPotion")
         {
             healtPotionCount++;
+        }
+        if (itemName == "ManaPotion")
+        {
+            manaPotionCount++;
+        }
+        if (itemName == "AttackPotion")
+        {
+            attackPotionCount++;
+        }
+        if (itemName == "DefensePotion")
+        {
+            defensePotionCount++;
         }
     }
 
