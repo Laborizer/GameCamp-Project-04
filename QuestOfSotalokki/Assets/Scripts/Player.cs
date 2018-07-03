@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
-    GameObject enemy;
-
     public float moveSpeed;
 
     public int healtPotionCount;
@@ -22,7 +20,6 @@ public class Player : MonoBehaviour {
 	void Start () {
         canMove = true;
         rb = GetComponent<Rigidbody>();
-        enemy = GameObject.Find("Enemy");
     }
 
     // Update is called once per frame
