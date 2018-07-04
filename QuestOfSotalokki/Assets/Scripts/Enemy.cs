@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
 
+    public float health;
+
     GameObject cameraSwitch;
     Boolean walk;
 

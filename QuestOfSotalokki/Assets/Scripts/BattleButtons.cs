@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class BattleButtons : MonoBehaviour {
 
+    public GameObject enemy;
+
     public GameObject attack;
     public GameObject specialMenu;
     public GameObject itemMenu;
@@ -30,6 +32,7 @@ public class BattleButtons : MonoBehaviour {
 
     public void doAttack()
     {
+        enemy.GetComponent<Enemy>().health = enemy.GetComponent<Enemy>().health - 25;
         specialMenu.SetActive(false);
         itemMenu.SetActive(false);
     }
