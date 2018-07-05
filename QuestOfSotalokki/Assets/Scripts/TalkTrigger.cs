@@ -24,17 +24,17 @@ public class TalkTrigger : MonoBehaviour {
             }
             else
             {
-                isTalking = false;
                 dialogueBox.SetActive(false);
                 transform.parent.GetComponent<Enemy>().SetBattle(true);
             }
         }
 
-        if (col.gameObject.tag == "PlayerTag" && this.gameObject.tag == "Enemy")
+        if (col.gameObject.tag == "PlayerTag" && this.gameObject.tag == "Enemy" && !isTalking)
         {
             dialogueBox.GetComponentInChildren<Text>().text = "Enemy:" + Environment.NewLine + "Are you wanna die!?";
             dialogueBox.SetActive(true);
             transform.parent.GetComponent<Enemy>().SetWalk(false);
+            isTalking = true;
         }
 
         if (col.gameObject.tag == "PlayerTag" && Input.GetKeyDown(KeyCode.E) && this.gameObject.tag == "NPC")
@@ -59,6 +59,7 @@ public class TalkTrigger : MonoBehaviour {
         if (col.gameObject.tag == "PlayerTag" && this.gameObject.tag == "Enemy")
         {
             transform.parent.GetComponent<Enemy>().SetBattle(false);
+            dialogueBox.SetActive(false);
         }
         else if (col.gameObject.tag == "PlayerTag" && this.gameObject.tag == "NPC")
         {
