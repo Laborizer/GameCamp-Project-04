@@ -51,5 +51,10 @@ public class TalkTrigger : MonoBehaviour {
         {
             transform.parent.GetComponent<Enemy>().SetBattle(false);
         }
+        else if (col.gameObject.tag == "PlayerTag" && this.gameObject.tag == "NPC")
+        {
+            dialogueBox.SetActive(false);
+            isTalking = false;
+        }
     }
 }
