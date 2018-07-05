@@ -43,5 +43,6 @@ public class Enemy : MonoBehaviour {
     public void SetWalk(bool result)
     {
         walk = result;
+        player.GetComponent<Player>().setMove(result);
     }
 }

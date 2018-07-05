@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class VisionTrigger : MonoBehaviour {
     public GameObject dialogueBox;
@@ -18,6 +20,7 @@ public class VisionTrigger : MonoBehaviour {
         {
             transform.parent.GetComponent<Enemy>().SetWalk(true);
             player.GetComponent<Player>().setMove(false);
+            dialogueBox.GetComponentInChildren<Text>().text = "Enemy:" + Environment.NewLine + "Are you wanna die!?";
             dialogueBox.SetActive(true);
         }
     }

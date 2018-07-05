@@ -33,6 +33,7 @@ public class TalkTrigger : MonoBehaviour {
         if (col.gameObject.tag == "PlayerTag" && this.gameObject.tag == "Enemy")
         {
             dialogueBox.GetComponentInChildren<Text>().text = "Enemy:" + Environment.NewLine + "Are you wanna die!?";
+            dialogueBox.SetActive(true);
             transform.parent.GetComponent<Enemy>().SetWalk(false);
         }
 
