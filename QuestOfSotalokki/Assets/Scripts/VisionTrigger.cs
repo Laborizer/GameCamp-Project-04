@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class VisionTrigger : MonoBehaviour {
+    public GameObject dialogueBox;
 
     GameObject player;
 
@@ -17,6 +18,7 @@ public class VisionTrigger : MonoBehaviour {
         {
             transform.parent.GetComponent<Enemy>().SetWalk(true);
             player.GetComponent<Player>().setMove(false);
+            dialogueBox.SetActive(true);
         }
     }
 

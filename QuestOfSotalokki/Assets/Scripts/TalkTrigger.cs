@@ -15,17 +15,25 @@ public class TalkTrigger : MonoBehaviour {
 
     private void OnTriggerStay(Collider col)
     {
-        if (col.gameObject.tag == "PlayerTag" && Input.GetKey(KeyCode.E) && this.gameObject.tag == "Enemy")
+        if (col.gameObject.tag == "PlayerTag" && Input.GetKeyDown(KeyCode.E) && this.gameObject.tag == "Enemy")
         {
-            transform.parent.GetComponent<Enemy>().SetBattle(true);
-            dialogueBox.SetActive(false);
+            if(!isTalking)
+            {
+                dialogueBox.SetActive(true);
+                isTalking = true;
+            }
+            else
+            {
+                isTalking = false;
+                dialogueBox.SetActive(false);
+                transform.parent.GetComponent<Enemy>().SetBattle(true);
+            }
         }
 
         if (col.gameObject.tag == "PlayerTag" && this.gameObject.tag == "Enemy")
         {
             dialogueBox.GetComponentInChildren<Text>().text = "Enemy:" + Environment.NewLine + "Are you wanna die!?";
             transform.parent.GetComponent<Enemy>().SetWalk(false);
-            dialogueBox.SetActive(true);
         }
 
         if (col.gameObject.tag == "PlayerTag" && Input.GetKeyDown(KeyCode.E) && this.gameObject.tag == "NPC")

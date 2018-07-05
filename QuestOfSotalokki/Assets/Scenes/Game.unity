@@ -3218,6 +3218,11 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1056367970}
+--- !u!1 &1074557032 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1454724151732032, guid: 0c22a0a318cdb574abe0b57b0b683451,
+    type: 2}
+  m_PrefabInternal: {fileID: 2141435185}
 --- !u!1 &1089607153
 GameObject:
   m_ObjectHideFlags: 0
@@ -5504,6 +5509,16 @@ Prefab:
       propertyPath: health
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 114448778094502390, guid: 0c22a0a318cdb574abe0b57b0b683451,
+        type: 2}
+      propertyPath: talkBox
+      value: 
+      objectReference: {fileID: 1074557032}
+    - target: {fileID: 114772124709951712, guid: 0c22a0a318cdb574abe0b57b0b683451,
+        type: 2}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 1089607153}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
   m_IsPrefabParent: 0
