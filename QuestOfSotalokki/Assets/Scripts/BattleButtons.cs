@@ -35,5 +35,9 @@ public class BattleButtons : MonoBehaviour {
         enemy.GetComponent<Enemy>().health = enemy.GetComponent<Enemy>().health - 25;
         specialMenu.SetActive(false);
         itemMenu.SetActive(false);
+        if (enemy.GetComponent<Enemy>().health <= 0)
+        {
+            enemy.GetComponent<Enemy>().SetBattle(false);
+        }
     }
 }

@@ -8,12 +8,14 @@ public class Enemy : MonoBehaviour {
     public float health;
 
     GameObject cameraSwitch;
+    GameObject player;
     Boolean walk;
 
     public float speed;
     public Transform target;
 
     void Start () {
+        player = GameObject.Find("Player");
         walk = false;
         cameraSwitch = GameObject.Find("Cameras");
     }
@@ -24,6 +26,12 @@ public class Enemy : MonoBehaviour {
         {
             float step = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+        }
+
+        if (health <= 0)
+        {
+            this.gameObject.SetActive(false);
+            player.GetComponent<Player>().setMove(true);
         }
     }
 
