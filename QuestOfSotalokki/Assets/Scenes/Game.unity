@@ -1204,7 +1204,7 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: talk
-      value: 'Dude: WTF u doings heres'
+      value: WTF u doings heres
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
@@ -3556,7 +3556,7 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: talk
-      value: 'Nti: Plz stop'
+      value: Plz stop
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
@@ -4862,7 +4862,7 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: talk
-      value: 'Pha: Prepares of gettings die'
+      value: Prepares of gettings die
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
@@ -5531,7 +5531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947030332a9aa8f4c9ec37ef545110e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  talk: 'NPC: i is of trash'
+  talk: I is of trash
 --- !u!1001 &2089335473
 Prefab:
   m_ObjectHideFlags: 0
@@ -5807,7 +5807,7 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: talk
-      value: 'Ele: What is of u lookings? DIE!'
+      value: What is of u lookings? DIE!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}

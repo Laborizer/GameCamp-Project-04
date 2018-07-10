@@ -11,4 +11,9 @@ public class NPC : MonoBehaviour {
     {
         return talk;
     }
+
+    internal string getName()
+    {
+        return this.gameObject.name;
+    }
 }

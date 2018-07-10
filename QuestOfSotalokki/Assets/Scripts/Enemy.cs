@@ -52,4 +52,9 @@ public class Enemy : MonoBehaviour {
     {
         return talk;
     }
+
+    internal string getName()
+    {
+        return this.gameObject.name;
+    }
 }
