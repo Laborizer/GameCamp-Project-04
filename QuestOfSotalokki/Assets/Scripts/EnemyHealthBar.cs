@@ -21,8 +21,10 @@ public class EnemyHealthBar : MonoBehaviour
     void Update()
     {
         enemy = GameObject.Find("Enemy");
-
-        fillAmount = enemy.GetComponent<Enemy>().health / 100;
+        if (enemy != null)
+        {
+            fillAmount = enemy.GetComponent<Enemy>().health / 100;
+        }
         HandleBar();
     }
 
