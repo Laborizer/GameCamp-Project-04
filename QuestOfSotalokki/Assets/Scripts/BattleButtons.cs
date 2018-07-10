@@ -12,10 +12,13 @@ public class BattleButtons : MonoBehaviour {
     public GameObject specialMenu;
     public GameObject itemMenu;
 
+    public bool playerTurn;
+
     // Use this for initialization
     void Start () {
         specialMenu.SetActive(false);
         itemMenu.SetActive(false);
+        playerTurn = true;
     }
 
     private void Update()
@@ -47,5 +50,10 @@ public class BattleButtons : MonoBehaviour {
                 enemy.GetComponent<Enemy>().SetBattle(false);
             }
         }
+    }
+
+    public void disablePlayerTurn()
+    {
+        playerTurn = false;
     }
 }
