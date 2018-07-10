@@ -15,6 +15,12 @@ public class TalkTrigger : MonoBehaviour {
 
     private void OnTriggerStay(Collider col)
     {
+        if (col.gameObject.tag == "PlayerTag")
+        {
+            transform.parent.name = "Enemy";
+            transform.parent.tag = "Enemy";
+        }
+
         if (col.gameObject.tag == "PlayerTag" && Input.GetKeyDown(KeyCode.E) && this.gameObject.tag == "Enemy")
         {
             if(!isTalking)

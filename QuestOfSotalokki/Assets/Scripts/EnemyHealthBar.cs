@@ -14,12 +14,14 @@ public class EnemyHealthBar : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        enemy = GameObject.Find("Enemy");
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        enemy = GameObject.Find("Enemy");
+
         fillAmount = enemy.GetComponent<Enemy>().health / 100;
         HandleBar();
     }

@@ -18,6 +18,11 @@ public class BattleButtons : MonoBehaviour {
         itemMenu.SetActive(false);
     }
 
+    private void Update()
+    {
+        enemy = GameObject.Find("Enemy");
+    }
+
     public void enableSpecialWindow()
     {
         specialMenu.SetActive(true);
