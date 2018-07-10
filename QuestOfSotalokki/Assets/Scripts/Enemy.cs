@@ -14,6 +14,8 @@ public class Enemy : MonoBehaviour {
     public float speed;
     public Transform target;
 
+    public String talk;
+
     void Start () {
         player = GameObject.Find("Player");
         walk = false;
@@ -44,5 +46,10 @@ public class Enemy : MonoBehaviour {
     {
         walk = result;
         player.GetComponent<Player>().setMove(result);
+    }
+
+    public String getText()
+    {
+        return talk;
     }
 }

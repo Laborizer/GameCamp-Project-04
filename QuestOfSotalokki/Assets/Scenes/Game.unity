@@ -1190,6 +1190,11 @@ Prefab:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
+        type: 2}
+      propertyPath: talk
+      value: 'Dude: WTF u doings heres'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
   m_IsPrefabParent: 0
@@ -2541,7 +2546,6 @@ GameObject:
   - component: {fileID: 612065558}
   - component: {fileID: 612065561}
   - component: {fileID: 612065560}
-  - component: {fileID: 612065559}
   m_Layer: 0
   m_Name: Special Menu
   m_TagString: Untagged
@@ -2572,18 +2576,6 @@ RectTransform:
   m_AnchoredPosition: {x: -8.55, y: -13.030013}
   m_SizeDelta: {x: 72.44, y: 18.37}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &612065559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114876698566051168, guid: e0c508eb126b3394e874ddd9d6caa3cb,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 612065557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e36a06e0d9c36c74abc7817e9cb46719, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &612065560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3523,6 +3515,11 @@ Prefab:
     - target: {fileID: 1673581803104238, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
+        type: 2}
+      propertyPath: talk
+      value: 'Nti: Plz stop'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
@@ -4813,6 +4810,11 @@ Prefab:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
+        type: 2}
+      propertyPath: talk
+      value: 'Pha: Prepares of gettings die'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
   m_IsPrefabParent: 0
@@ -5368,6 +5370,7 @@ GameObject:
   - component: {fileID: 2085247222}
   - component: {fileID: 2085247221}
   - component: {fileID: 2085247220}
+  - component: {fileID: 2085247223}
   m_Layer: 0
   m_Name: NPC
   m_TagString: NPC
@@ -5446,6 +5449,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &2085247223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2085247219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 947030332a9aa8f4c9ec37ef545110e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  talk: 'NPC: i is of trash'
 --- !u!1001 &2089335473
 Prefab:
   m_ObjectHideFlags: 0
@@ -5585,7 +5600,6 @@ GameObject:
   - component: {fileID: 2114629775}
   - component: {fileID: 2114629774}
   - component: {fileID: 2114629773}
-  - component: {fileID: 2114629772}
   m_Layer: 0
   m_Name: Battle Camera
   m_TagString: Untagged
@@ -5593,14 +5607,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &2114629772
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 81050170135180456, guid: e0c508eb126b3394e874ddd9d6caa3cb,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2114629771}
-  m_Enabled: 1
 --- !u!124 &2114629773
 Behaviour:
   m_ObjectHideFlags: 0
@@ -5726,6 +5732,11 @@ Prefab:
     - target: {fileID: 1673581803104238, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
+        type: 2}
+      propertyPath: talk
+      value: 'Ele: What is of u lookings? DIE!'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}

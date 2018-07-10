@@ -15,7 +15,7 @@ public class TalkTrigger : MonoBehaviour {
 
     private void OnTriggerStay(Collider col)
     {
-        if (col.gameObject.tag == "PlayerTag")
+        if (col.gameObject.tag == "PlayerTag" && this.gameObject.tag != "NPC")
         {
             transform.parent.name = "Enemy";
             transform.parent.tag = "Enemy";
@@ -37,7 +37,7 @@ public class TalkTrigger : MonoBehaviour {
 
         if (col.gameObject.tag == "PlayerTag" && this.gameObject.tag == "Enemy" && !isTalking)
         {
-            dialogueBox.GetComponentInChildren<Text>().text = "Enemy:" + Environment.NewLine + "Are you wanna die!?";
+            dialogueBox.GetComponentInChildren<Text>().text = transform.parent.GetComponent<Enemy>().getText();
             dialogueBox.SetActive(true);
             transform.parent.GetComponent<Enemy>().SetWalk(false);
             isTalking = true;
@@ -45,7 +45,7 @@ public class TalkTrigger : MonoBehaviour {
 
         if (col.gameObject.tag == "PlayerTag" && Input.GetKeyDown(KeyCode.E) && this.gameObject.tag == "NPC")
         {
-            dialogueBox.GetComponentInChildren<Text>().text = "NPC:" + Environment.NewLine + "Hello! I provide you with zero information, therefore I am pretty useless. However, I can do a few neat magic tricks. Wanna see?";
+            dialogueBox.GetComponentInChildren<Text>().text = transform.parent.GetComponent<NPC>().getText();
 
             if (!isTalking)
             {
