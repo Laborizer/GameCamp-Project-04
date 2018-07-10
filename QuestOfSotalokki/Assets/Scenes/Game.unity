@@ -495,7 +495,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1957781306447774, guid: 3bac96a4e7465cc4abdeb799300d693a, type: 2}
       propertyPath: m_Name
-      value: DefensePotion (1)
+      value: DefensePotion
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3bac96a4e7465cc4abdeb799300d693a, type: 2}
@@ -765,6 +765,7 @@ Transform:
   - {fileID: 1190192038}
   - {fileID: 1954486533}
   - {fileID: 1682310926}
+  - {fileID: 406411468}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1124,6 +1125,79 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 384412063}
+--- !u!1001 &406411467
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 309233272}
+    m_Modifications:
+    - target: {fileID: 4589074668832458, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589074668832458, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589074668832458, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -2.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589074668832458, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589074668832458, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589074668832458, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589074668832458, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589074668832458, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114308693783620324, guid: 0c22a0a318cdb574abe0b57b0b683451,
+        type: 2}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 1089607153}
+    - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
+        type: 2}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1555624423}
+    - target: {fileID: 4589074668832458, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.0000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589074668832458, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.0000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 1673581803104238, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
+      propertyPath: m_Name
+      value: Enemy4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1673581803104238, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &406411468 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4589074668832458, guid: 0c22a0a318cdb574abe0b57b0b683451,
+    type: 2}
+  m_PrefabInternal: {fileID: 406411467}
 --- !u!1 &408873934
 GameObject:
   m_ObjectHideFlags: 0
@@ -2772,7 +2846,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1911572928615280, guid: b6209a414954bd24cb1af2bc8a002b34, type: 2}
       propertyPath: m_Name
-      value: ManaPotion (2)
+      value: ManaPotion
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6209a414954bd24cb1af2bc8a002b34, type: 2}
@@ -4013,7 +4087,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1911572928615280, guid: b6209a414954bd24cb1af2bc8a002b34, type: 2}
       propertyPath: m_Name
-      value: ManaPotion (1)
+      value: ManaPotion
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6209a414954bd24cb1af2bc8a002b34, type: 2}
@@ -4076,7 +4150,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1594548023949704, guid: 59b3f837a69875f42a73d46a0d326d23, type: 2}
       propertyPath: m_Name
-      value: HealtPotion (2)
+      value: HealtPotion
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 59b3f837a69875f42a73d46a0d326d23, type: 2}
@@ -4345,7 +4419,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1957781306447774, guid: 3bac96a4e7465cc4abdeb799300d693a, type: 2}
       propertyPath: m_Name
-      value: DefensePotion (2)
+      value: DefensePotion
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3bac96a4e7465cc4abdeb799300d693a, type: 2}
@@ -4664,7 +4738,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1225288088323512, guid: 8587f742195a6bc4690fd14dcb727917, type: 2}
       propertyPath: m_Name
-      value: AttackPotion (1)
+      value: AttackPotion
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8587f742195a6bc4690fd14dcb727917, type: 2}
@@ -4923,7 +4997,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1225288088323512, guid: 8587f742195a6bc4690fd14dcb727917, type: 2}
       propertyPath: m_Name
-      value: AttackPotion (2)
+      value: AttackPotion
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8587f742195a6bc4690fd14dcb727917, type: 2}
@@ -5425,7 +5499,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1594548023949704, guid: 59b3f837a69875f42a73d46a0d326d23, type: 2}
       propertyPath: m_Name
-      value: HealtPotion (1)
+      value: HealtPotion
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 59b3f837a69875f42a73d46a0d326d23, type: 2}
