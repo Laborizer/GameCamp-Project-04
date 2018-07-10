@@ -37,7 +37,7 @@ public class TalkTrigger : MonoBehaviour {
 
         if (col.gameObject.tag == "PlayerTag" && this.gameObject.tag == "Enemy" && !isTalking)
         {
-            dialogueBox.GetComponentInChildren<Text>().text = transform.parent.GetComponent<Enemy>().getText();
+            dialogueBox.GetComponentInChildren<Text>().text = transform.parent.GetComponent<Enemy>().getName() + ":\n" + transform.parent.GetComponent<Enemy>().getText();
             dialogueBox.SetActive(true);
             transform.parent.GetComponent<Enemy>().SetWalk(false);
             isTalking = true;
@@ -45,7 +45,7 @@ public class TalkTrigger : MonoBehaviour {
 
         if (col.gameObject.tag == "PlayerTag" && Input.GetKeyDown(KeyCode.E) && this.gameObject.tag == "NPC")
         {
-            dialogueBox.GetComponentInChildren<Text>().text = transform.parent.GetComponent<NPC>().getText();
+            dialogueBox.GetComponentInChildren<Text>().text = transform.parent.GetComponent<NPC>().getName() + ":\n" + transform.parent.GetComponent<NPC>().getText();
 
             if (!isTalking)
             {
