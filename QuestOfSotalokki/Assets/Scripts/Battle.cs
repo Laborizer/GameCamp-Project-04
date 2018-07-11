@@ -34,6 +34,8 @@ public class Battle : MonoBehaviour {
         {
             buttons.GetComponent<BattleButtons>().playerTurn = true;
             player.GetComponent<Player>().health = 100;
+            player.GetComponent<Player>().attackDamage = 20;
+            player.GetComponent<Player>().defense = 0;
         }
 	}
 
@@ -53,7 +55,7 @@ public class Battle : MonoBehaviour {
 
     private void attackPlayer()
     {
-        player.GetComponent<Player>().health = player.GetComponent<Player>().health - skill;
+        player.GetComponent<Player>().health = player.GetComponent<Player>().health - (skill - player.GetComponent<Player>().defense);
         buttons.GetComponent<BattleButtons>().playerTurn = true;
     }
 

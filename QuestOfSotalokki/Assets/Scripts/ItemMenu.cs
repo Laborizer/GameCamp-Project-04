@@ -30,6 +30,7 @@ public class ItemMenu : MonoBehaviour {
         if(player.GetComponent<Player>().healtPotionCount > 0)
         {
             player.GetComponent<Player>().healtPotionCount--;
+            player.GetComponent<Player>().health = player.GetComponent<Player>().health + 50;
         }
     }
     public void useManaPotion()
@@ -44,6 +45,7 @@ public class ItemMenu : MonoBehaviour {
         if (player.GetComponent<Player>().attackPotionCount > 0)
         {
             player.GetComponent<Player>().attackPotionCount--;
+            player.GetComponent<Player>().attackDamage = player.GetComponent<Player>().attackDamage * 1.5f;
         }
     }
     public void useDefensePotion()
@@ -51,6 +53,7 @@ public class ItemMenu : MonoBehaviour {
         if (player.GetComponent<Player>().defensePotionCount > 0)
         {
             player.GetComponent<Player>().defensePotionCount--;
+            player.GetComponent<Player>().defense = player.GetComponent<Player>().defense + 5;
         }
     }
 }

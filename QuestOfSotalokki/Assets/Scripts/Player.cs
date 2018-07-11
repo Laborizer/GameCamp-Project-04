@@ -7,6 +7,8 @@ public class Player : MonoBehaviour {
 
     public float health;
     public float moveSpeed;
+    public float attackDamage;
+    public float defense;
 
     public int healtPotionCount;
     public int manaPotionCount;
@@ -21,6 +23,8 @@ public class Player : MonoBehaviour {
 	void Start () {
         canMove = true;
         rb = GetComponent<Rigidbody>();
+        attackDamage = 20;
+        defense = 0;
     }
 
     // Update is called once per frame

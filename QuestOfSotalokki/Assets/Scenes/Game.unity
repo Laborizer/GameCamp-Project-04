@@ -4700,6 +4700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 0}
+  player: {fileID: 750941679}
   attack: {fileID: 1989800357}
   specialMenu: {fileID: 612065557}
   itemMenu: {fileID: 246277367}
