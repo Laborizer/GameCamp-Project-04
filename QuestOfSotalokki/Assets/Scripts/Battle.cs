@@ -10,6 +10,7 @@ public class Battle : MonoBehaviour {
 
     public bool inBattle;
     public GameObject cameras;
+    public GameObject items;
     public GameObject buttons;
 
     bool playerTurn;
@@ -24,7 +25,7 @@ public class Battle : MonoBehaviour {
 	void Update () {
         enemy = GameObject.Find("Enemy");
         inBattle = cameras.GetComponent<CameraSwitch>().inBattle;
-        playerTurn = buttons.GetComponent<BattleButtons>().playerTurn;
+        playerTurn = items.GetComponent<ItemMenu>().playerTurn;
 
         if(inBattle)
         {
@@ -32,7 +33,7 @@ public class Battle : MonoBehaviour {
         }
         else
         {
-            buttons.GetComponent<BattleButtons>().playerTurn = true;
+            items.GetComponent<ItemMenu>().playerTurn = true;
             player.GetComponent<Player>().health = 100;
             player.GetComponent<Player>().attackDamage = 20;
             player.GetComponent<Player>().defense = 0;
@@ -56,7 +57,7 @@ public class Battle : MonoBehaviour {
     private void attackPlayer()
     {
         player.GetComponent<Player>().health = player.GetComponent<Player>().health - (skill - player.GetComponent<Player>().defense);
-        buttons.GetComponent<BattleButtons>().playerTurn = true;
+        items.GetComponent<ItemMenu>().playerTurn = true;
     }
 
     private void enemyRandomizeAttack()

@@ -10,11 +10,14 @@ public class ItemMenu : MonoBehaviour {
     public Button attackPotionButton;
     public Button defensePotionButton;
 
+    public bool playerTurn;
+
     GameObject player;
 
 	// Use this for initialization
 	void Start () {
         player = GameObject.Find("Player");
+        playerTurn = true;
     }
 	
 	// Update is called once per frame
@@ -31,6 +34,7 @@ public class ItemMenu : MonoBehaviour {
         {
             player.GetComponent<Player>().healtPotionCount--;
             player.GetComponent<Player>().health = player.GetComponent<Player>().health + 50;
+            disablePlayerTurn();
         }
     }
     public void useManaPotion()
@@ -38,6 +42,7 @@ public class ItemMenu : MonoBehaviour {
         if (player.GetComponent<Player>().manaPotionCount > 0)
         {
             player.GetComponent<Player>().manaPotionCount--;
+            disablePlayerTurn();
         }
     }
     public void useAttackPotion()
@@ -46,6 +51,7 @@ public class ItemMenu : MonoBehaviour {
         {
             player.GetComponent<Player>().attackPotionCount--;
             player.GetComponent<Player>().attackDamage = player.GetComponent<Player>().attackDamage * 1.5f;
+            disablePlayerTurn();
         }
     }
     public void useDefensePotion()
@@ -54,6 +60,12 @@ public class ItemMenu : MonoBehaviour {
         {
             player.GetComponent<Player>().defensePotionCount--;
             player.GetComponent<Player>().defense = player.GetComponent<Player>().defense + 5;
+            disablePlayerTurn();
         }
+    }
+
+    public void disablePlayerTurn()
+    {
+        playerTurn = false;
     }
 }

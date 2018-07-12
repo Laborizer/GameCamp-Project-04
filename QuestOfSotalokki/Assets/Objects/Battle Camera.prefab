@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 224994051594798074}
   - component: {fileID: 222949807396578148}
   - component: {fileID: 114952794069422862}
-  - component: {fileID: 114876698566051168}
   m_Layer: 0
   m_Name: Special Menu
   m_TagString: Untagged
@@ -727,6 +726,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a203908f8bbc50f4f96e9138853f79c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
+  player: {fileID: 0}
   attack: {fileID: 1174692333664784}
   specialMenu: {fileID: 1032534045053532}
   itemMenu: {fileID: 1370895989786786}
@@ -865,6 +866,7 @@ MonoBehaviour:
   manaPotionButton: {fileID: 114884236616940162}
   attackPotionButton: {fileID: 114323906066319886}
   defensePotionButton: {fileID: 114216446428301260}
+  playerTurn: 0
 --- !u!114 &114177522071680142
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1961,17 +1963,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 
---- !u!114 &114876698566051168
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1032534045053532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114884236616940162
 MonoBehaviour:
   m_ObjectHideFlags: 1
