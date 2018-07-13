@@ -35,6 +35,11 @@ public class Player : MonoBehaviour {
         }
 	}
 
+    public void Die()
+    {
+        this.gameObject.SetActive(false);
+    }
+
     private void Move()
     {
         moveInput = new Vector3(Input.GetAxisRaw("Horizontal"),0f, Input.GetAxisRaw("Vertical"));

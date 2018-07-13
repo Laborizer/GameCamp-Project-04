@@ -12,6 +12,8 @@ public class Battle : MonoBehaviour {
     public GameObject cameras;
     public GameObject items;
     public GameObject buttons;
+    public GameObject gameOverUI;
+
 
     bool playerTurn;
     int skill;
@@ -37,6 +39,13 @@ public class Battle : MonoBehaviour {
             player.GetComponent<Player>().health = 100;
             player.GetComponent<Player>().attackDamage = 20;
             player.GetComponent<Player>().defense = 0;
+        }
+
+        if (player.GetComponent<Player>().health <= 0)
+        {
+            cameras.GetComponent<CameraSwitch>().setInBattle(false);
+            player.GetComponent<Player>().Die();
+            gameOverUI.SetActive(true);
         }
 	}
 

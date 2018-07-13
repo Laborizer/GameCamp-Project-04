@@ -37,7 +37,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4589074668832458}
   - component: {fileID: 212710190485069502}
-  - component: {fileID: 114424744452108720}
   - component: {fileID: 54733427767129466}
   - component: {fileID: 114714244869631068}
   - component: {fileID: 65576992614670582}
@@ -169,23 +168,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 0}
---- !u!114 &114424744452108720
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1673581803104238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 657e96e04880fa843aa15827e1aca829, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
-  moveSpeed: 0
-  healtPotionCount: 0
-  manaPotionCount: 0
-  attackPotionCount: 0
-  defensePotionCount: 0
 --- !u!114 &114714244869631068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -200,6 +182,11 @@ MonoBehaviour:
   health: 100
   speed: 1
   target: {fileID: 0}
+  talk: 
+  skill1: 0
+  skill2: 0
+  skill3: 0
+  skill4: 0
 --- !u!114 &114848186910089604
 MonoBehaviour:
   m_ObjectHideFlags: 1
