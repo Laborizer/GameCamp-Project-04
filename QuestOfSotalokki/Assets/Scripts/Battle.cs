@@ -2,11 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Battle : MonoBehaviour {
 
     public GameObject enemy;
     public GameObject player;
+    public GameObject battleLog;
 
     public bool inBattle;
     public GameObject cameras;
@@ -16,6 +18,7 @@ public class Battle : MonoBehaviour {
 
 
     bool playerTurn;
+    bool enemyAttacked;
     int skill;
     float countdown;
 
@@ -23,6 +26,7 @@ public class Battle : MonoBehaviour {
 	void Start () {
         playerTurn = true;
         countdown = 0;
+        enemyAttacked = false;
 	}
 	
 	// Update is called once per frame
@@ -55,13 +59,25 @@ public class Battle : MonoBehaviour {
     {
         if(!playerTurn)
         {
+            battleLog.GetComponentInChildren<Text>().text = "Enemy attacks!";
             buttons.SetActive(false);
             
-            if(countdown >= 2)
+            if(countdown >= 1)
             {
-                countdown = 0;
+                battleLog.SetActive(true);
+            }
+            if(countdown >= 3 && !enemyAttacked)
+            {
                 enemyRandomizeAttack();
                 attackPlayer();
+                enemyAttacked = true;
+            }
+            if(countdown >= 4)
+            {
+                items.GetComponent<ItemMenu>().playerTurn = true;
+                countdown = 0;
+                battleLog.SetActive(false);
+                enemyAttacked = false;
             }
             else
             {
@@ -77,7 +93,6 @@ public class Battle : MonoBehaviour {
     private void attackPlayer()
     {
         player.GetComponent<Player>().health = player.GetComponent<Player>().health - (skill - player.GetComponent<Player>().defense);
-        items.GetComponent<ItemMenu>().playerTurn = true;
     }
 
     private void enemyRandomizeAttack()
