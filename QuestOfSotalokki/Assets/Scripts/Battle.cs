@@ -17,10 +17,12 @@ public class Battle : MonoBehaviour {
 
     bool playerTurn;
     int skill;
+    float countdown;
 
 	// Use this for initialization
 	void Start () {
         playerTurn = true;
+        countdown = 0;
 	}
 	
 	// Update is called once per frame
@@ -54,8 +56,17 @@ public class Battle : MonoBehaviour {
         if(!playerTurn)
         {
             buttons.SetActive(false);
-            enemyRandomizeAttack();
-            attackPlayer();
+            
+            if(countdown >= 2)
+            {
+                countdown = 0;
+                enemyRandomizeAttack();
+                attackPlayer();
+            }
+            else
+            {
+                countdown = countdown + Time.deltaTime;
+            }
         }
         else
         {
