@@ -34,6 +34,10 @@ public class ItemMenu : MonoBehaviour {
         {
             player.GetComponent<Player>().healtPotionCount--;
             player.GetComponent<Player>().health = player.GetComponent<Player>().health + 50;
+            if(player.GetComponent<Player>().health > 100)
+            {
+                player.GetComponent<Player>().health = 100;
+            }
             disablePlayerTurn();
         }
     }
