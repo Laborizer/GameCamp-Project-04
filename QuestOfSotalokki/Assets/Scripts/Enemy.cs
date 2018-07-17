@@ -17,9 +17,18 @@ public class Enemy : MonoBehaviour {
     public String talk;
 
     public int skill1;
+    public String skill1Name;
+
     public int skill2;
+    public String skill2Name;
+
     public int skill3;
+    public String skill3Name;
+
     public int skill4;
+    public String skill4Name;
+
+
 
     void Start () {
         player = GameObject.Find("Player");

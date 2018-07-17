@@ -30,42 +30,30 @@ public class ItemMenu : MonoBehaviour {
 
     public void useHealthPotion()
     {
-        if(player.GetComponent<Player>().healtPotionCount > 0)
+        player.GetComponent<Player>().healtPotionCount--;
+        player.GetComponent<Player>().health = player.GetComponent<Player>().health + 50;
+        if(player.GetComponent<Player>().health > 100)
         {
-            player.GetComponent<Player>().healtPotionCount--;
-            player.GetComponent<Player>().health = player.GetComponent<Player>().health + 50;
-            if(player.GetComponent<Player>().health > 100)
-            {
-                player.GetComponent<Player>().health = 100;
-            }
-            disablePlayerTurn();
+            player.GetComponent<Player>().health = 100;
         }
+        disablePlayerTurn();
     }
     public void useManaPotion()
     {
-        if (player.GetComponent<Player>().manaPotionCount > 0)
-        {
-            player.GetComponent<Player>().manaPotionCount--;
-            disablePlayerTurn();
-        }
+        player.GetComponent<Player>().manaPotionCount--;
+        disablePlayerTurn();
     }
     public void useAttackPotion()
     {
-        if (player.GetComponent<Player>().attackPotionCount > 0)
-        {
-            player.GetComponent<Player>().attackPotionCount--;
-            player.GetComponent<Player>().attackDamage = player.GetComponent<Player>().attackDamage * 1.5f;
-            disablePlayerTurn();
-        }
+        player.GetComponent<Player>().attackPotionCount--;
+        player.GetComponent<Player>().attackDamage = player.GetComponent<Player>().attackDamage * 1.5f;
+        disablePlayerTurn();
     }
     public void useDefensePotion()
     {
-        if (player.GetComponent<Player>().defensePotionCount > 0)
-        {
-            player.GetComponent<Player>().defensePotionCount--;
-            player.GetComponent<Player>().defense = player.GetComponent<Player>().defense + 5;
-            disablePlayerTurn();
-        }
+        player.GetComponent<Player>().defensePotionCount--;
+        player.GetComponent<Player>().defense = player.GetComponent<Player>().defense + 5;
+        disablePlayerTurn();
     }
 
     public void disablePlayerTurn()

@@ -16,18 +16,26 @@ public class Battle : MonoBehaviour {
     public GameObject buttons;
     public GameObject gameOverUI;
 
+    String enemySkillName;
     bool doCountdown;
-    public bool usedAttack;
+    bool actionDone;
     bool attackButtonPressed;
     bool playerTurn;
     bool enemyAttacked;
     int skill;
     float countdown;
+    public bool randomizeDone;
 
-	// Use this for initialization
-	void Start () {
+    bool healthPotionButtonPressed;
+    bool manaPotionButtonPressed;
+    bool attackPotionButtonPressed;
+    bool defensePotionButtonPressed;
+
+    // Use this for initialization
+    void Start () {
+        randomizeDone = false;
         doCountdown = false;
-        usedAttack = false;
+        actionDone = false;
         playerTurn = true;
         countdown = 0;
         attackButtonPressed = false;
@@ -43,6 +51,8 @@ public class Battle : MonoBehaviour {
         if(inBattle)
         {
             combat();
+            checkAttack();
+            checkPotions();
         }
         else
         {
@@ -58,32 +68,175 @@ public class Battle : MonoBehaviour {
             player.GetComponent<Player>().Die();
             gameOverUI.SetActive(true);
         }
+    }
 
-        if(attackButtonPressed && playerTurn)
+    private void checkAttack()
+    {
+        if (attackButtonPressed && playerTurn)
         {
             playerAttack();
         }
-	}
+    }
 
-    private void playerAttack()
+    private void checkPotions()
     {
-        battleLog.GetComponentInChildren<Text>().text = "Player attacks!";
+        if (healthPotionButtonPressed && playerTurn)
+        {
+            buttons.GetComponent<BattleButtons>().disableMenus();
+            useHealthPotion();
+        }
+        else if (manaPotionButtonPressed && playerTurn)
+        {
+            buttons.GetComponent<BattleButtons>().disableMenus();
+            useManaPotion();
+        }
+        else if (attackPotionButtonPressed && playerTurn)
+        {
+            buttons.GetComponent<BattleButtons>().disableMenus();
+            useAttackPotion();
+        }
+        else if (defensePotionButtonPressed && playerTurn)
+        {
+            buttons.GetComponent<BattleButtons>().disableMenus();
+            useDefensePotion();
+        }
+    }
+
+    private void useHealthPotion()
+    {
         buttons.SetActive(false);
         doCountdown = true;
 
         if (countdown >= 4)
         {
             doCountdown = false;
-            usedAttack = false;
+            actionDone = false;
+            countdown = 0;
+            battleLog.SetActive(false);
+            healthPotionButtonPressed = false;
+            items.GetComponent<ItemMenu>().playerTurn = false;
+        }
+        else if (countdown >= 3 && !actionDone)
+        {
+            items.GetComponent<ItemMenu>().useHealthPotion();
+            actionDone = true;
+        }
+        else if (countdown >= 1)
+        {
+            battleLog.SetActive(true);
+        }
+
+        if (doCountdown)
+        {
+            countdown = countdown + Time.deltaTime;
+        }
+    }
+    private void useManaPotion()
+    {
+        buttons.SetActive(false);
+        doCountdown = true;
+
+        if (countdown >= 4)
+        {
+            doCountdown = false;
+            actionDone = false;
+            countdown = 0;
+            battleLog.SetActive(false);
+            manaPotionButtonPressed = false;
+            items.GetComponent<ItemMenu>().playerTurn = false;
+        }
+        else if (countdown >= 3 && !actionDone)
+        {
+            items.GetComponent<ItemMenu>().useManaPotion();
+            actionDone = true;
+        }
+        else if (countdown >= 1)
+        {
+            battleLog.SetActive(true);
+        }
+
+        if (doCountdown)
+        {
+            countdown = countdown + Time.deltaTime;
+        }
+    }
+    private void useAttackPotion()
+    {
+        buttons.SetActive(false);
+        doCountdown = true;
+
+        if (countdown >= 4)
+        {
+            doCountdown = false;
+            actionDone = false;
+            countdown = 0;
+            battleLog.SetActive(false);
+            attackPotionButtonPressed = false;
+            items.GetComponent<ItemMenu>().playerTurn = false;
+        }
+        else if (countdown >= 3 && !actionDone)
+        {
+            items.GetComponent<ItemMenu>().useAttackPotion();
+            actionDone = true;
+        }
+        else if (countdown >= 1)
+        {
+            battleLog.SetActive(true);
+        }
+
+        if (doCountdown)
+        {
+            countdown = countdown + Time.deltaTime;
+        }
+    }
+    private void useDefensePotion()
+    {
+        buttons.SetActive(false);
+        doCountdown = true;
+
+        if (countdown >= 4)
+        {
+            doCountdown = false;
+            actionDone = false;
+            countdown = 0;
+            battleLog.SetActive(false);
+            defensePotionButtonPressed = false;
+            items.GetComponent<ItemMenu>().playerTurn = false;
+        }
+        else if (countdown >= 3 && !actionDone)
+        {
+            items.GetComponent<ItemMenu>().useDefensePotion();
+            actionDone = true;
+        }
+        else if (countdown >= 1)
+        {
+            battleLog.SetActive(true);
+        }
+
+        if (doCountdown)
+        {
+            countdown = countdown + Time.deltaTime;
+        }
+    }
+
+    private void playerAttack()
+    {
+        buttons.SetActive(false);
+        doCountdown = true;
+
+        if (countdown >= 4)
+        {
+            doCountdown = false;
+            actionDone = false;
             countdown = 0;
             battleLog.SetActive(false);
             attackButtonPressed = false;
             items.GetComponent<ItemMenu>().playerTurn = false;
         }
-        else if (countdown >= 3 && !usedAttack)
+        else if (countdown >= 3 && !actionDone)
         {
             buttons.GetComponent<BattleButtons>().doAttack();
-            usedAttack = true;
+            actionDone = true;
         }
         else if (countdown >= 1)
         {
@@ -101,7 +254,6 @@ public class Battle : MonoBehaviour {
         if(!playerTurn)
         {
             doCountdown = true;
-            battleLog.GetComponentInChildren<Text>().text = "Enemy attacks!";
             buttons.SetActive(false);
 
             if (countdown >= 4)
@@ -110,17 +262,20 @@ public class Battle : MonoBehaviour {
                 items.GetComponent<ItemMenu>().playerTurn = true;
                 countdown = 0;
                 battleLog.SetActive(false);
+                randomizeDone = false;
                 enemyAttacked = false;
             }
             else if(countdown >= 3 && !enemyAttacked)
             {
-                enemyRandomizeAttack();
                 attackPlayer();
                 enemyAttacked = true;
             }
-            else if (countdown >= 1)
+            else if (countdown >= 1 && !randomizeDone)
             {
                 battleLog.SetActive(true);
+                enemyRandomizeAttack();
+                randomizeDone = true;
+                battleLog.GetComponentInChildren<Text>().text = "Enemy uses " + enemySkillName + "!";
             }
 
             if(doCountdown)
@@ -136,7 +291,10 @@ public class Battle : MonoBehaviour {
 
     private void attackPlayer()
     {
-        player.GetComponent<Player>().health = player.GetComponent<Player>().health - (skill - player.GetComponent<Player>().defense);
+        if(skill - player.GetComponent<Player>().defense > 0)
+        {
+            player.GetComponent<Player>().health = player.GetComponent<Player>().health - (skill - player.GetComponent<Player>().defense);
+        }
     }
 
     private void enemyRandomizeAttack()
@@ -146,21 +304,58 @@ public class Battle : MonoBehaviour {
         switch (skill) {
             case 1:
                 skill = enemy.GetComponent<Enemy>().skill1;
+                enemySkillName = enemy.GetComponent<Enemy>().skill1Name;
                 break;
             case 2:
                 skill = enemy.GetComponent<Enemy>().skill2;
+                enemySkillName = enemy.GetComponent<Enemy>().skill2Name;
                 break;
             case 3:
                 skill = enemy.GetComponent<Enemy>().skill3;
+                enemySkillName = enemy.GetComponent<Enemy>().skill3Name;
                 break;
             case 4:
                 skill = enemy.GetComponent<Enemy>().skill4;
+                enemySkillName = enemy.GetComponent<Enemy>().skill4Name;
                 break;
         }
     }
 
+    public void usedHealthPotion()
+    {
+        if(player.GetComponent<Player>().healtPotionCount>0)
+        {
+            battleLog.GetComponentInChildren<Text>().text = "Player uses Health Potion!";
+            healthPotionButtonPressed = true;
+        }
+    }
+    public void usedManaPotion()
+    {
+        if (player.GetComponent<Player>().manaPotionCount > 0)
+        {
+            battleLog.GetComponentInChildren<Text>().text = "Player uses Mana Potion!";
+            manaPotionButtonPressed = true;
+        }
+    }
+    public void usedAttackPotion()
+    {
+        if (player.GetComponent<Player>().attackPotionCount > 0)
+        {
+            battleLog.GetComponentInChildren<Text>().text = "Player uses Attack Potion!";
+            attackPotionButtonPressed = true;
+        }
+    }
+    public void usedDefensePotion()
+    {
+        if (player.GetComponent<Player>().defensePotionCount > 0)
+        {
+            battleLog.GetComponentInChildren<Text>().text = "Player uses Defense Potion!";
+            defensePotionButtonPressed = true;
+        }
+    }
     public void playerUsedAttack()
     {
         attackButtonPressed = true;
+        battleLog.GetComponentInChildren<Text>().text = "Player attacks!";
     }
 }
