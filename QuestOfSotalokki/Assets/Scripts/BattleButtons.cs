@@ -41,12 +41,16 @@ public class BattleButtons : MonoBehaviour {
         if (enemy != null)
         {
             enemy.GetComponent<Enemy>().health = enemy.GetComponent<Enemy>().health - player.GetComponent<Player>().attackDamage;
-            //specialMenu.SetActive(false);
-            //itemMenu.SetActive(false);
             if (enemy.GetComponent<Enemy>().health <= 0)
             {
                 enemy.GetComponent<Enemy>().SetBattle(false);
             }
         }
+    }
+
+    public void disableMenus()
+    {
+        itemMenu.SetActive(false);
+        specialMenu.SetActive(false);
     }
 }

@@ -3302,6 +3302,7 @@ MonoBehaviour:
   items: {fileID: 246277367}
   buttons: {fileID: 1715567778}
   gameOverUI: {fileID: 925748461}
+  usedAttack: 0
 --- !u!1 &672306364
 GameObject:
   m_ObjectHideFlags: 0
@@ -6253,8 +6254,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1715567780}
-        m_MethodName: doAttack
+      - m_Target: {fileID: 615604404}
+        m_MethodName: playerUsedAttack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6264,8 +6265,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 246277371}
-        m_MethodName: disablePlayerTurn
+      - m_Target: {fileID: 1715567780}
+        m_MethodName: disableMenus
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

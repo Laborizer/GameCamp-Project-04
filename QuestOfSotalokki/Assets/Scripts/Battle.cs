@@ -16,7 +16,9 @@ public class Battle : MonoBehaviour {
     public GameObject buttons;
     public GameObject gameOverUI;
 
-
+    bool doCountdown;
+    public bool usedAttack;
+    bool attackButtonPressed;
     bool playerTurn;
     bool enemyAttacked;
     int skill;
@@ -24,8 +26,11 @@ public class Battle : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        doCountdown = false;
+        usedAttack = false;
         playerTurn = true;
         countdown = 0;
+        attackButtonPressed = false;
         enemyAttacked = false;
 	}
 	
@@ -53,33 +58,72 @@ public class Battle : MonoBehaviour {
             player.GetComponent<Player>().Die();
             gameOverUI.SetActive(true);
         }
+
+        if(attackButtonPressed && playerTurn)
+        {
+            playerAttack();
+        }
 	}
+
+    private void playerAttack()
+    {
+        battleLog.GetComponentInChildren<Text>().text = "Player attacks!";
+        buttons.SetActive(false);
+        doCountdown = true;
+
+        if (countdown >= 4)
+        {
+            doCountdown = false;
+            usedAttack = false;
+            countdown = 0;
+            battleLog.SetActive(false);
+            attackButtonPressed = false;
+            items.GetComponent<ItemMenu>().playerTurn = false;
+        }
+        else if (countdown >= 3 && !usedAttack)
+        {
+            buttons.GetComponent<BattleButtons>().doAttack();
+            usedAttack = true;
+        }
+        else if (countdown >= 1)
+        {
+            battleLog.SetActive(true);
+        }
+
+        if(doCountdown)
+        {
+            countdown = countdown + Time.deltaTime;
+        }
+    }
 
     private void combat()
     {
         if(!playerTurn)
         {
+            doCountdown = true;
             battleLog.GetComponentInChildren<Text>().text = "Enemy attacks!";
             buttons.SetActive(false);
-            
-            if(countdown >= 1)
+
+            if (countdown >= 4)
             {
-                battleLog.SetActive(true);
-            }
-            if(countdown >= 3 && !enemyAttacked)
-            {
-                enemyRandomizeAttack();
-                attackPlayer();
-                enemyAttacked = true;
-            }
-            if(countdown >= 4)
-            {
+                doCountdown = false;
                 items.GetComponent<ItemMenu>().playerTurn = true;
                 countdown = 0;
                 battleLog.SetActive(false);
                 enemyAttacked = false;
             }
-            else
+            else if(countdown >= 3 && !enemyAttacked)
+            {
+                enemyRandomizeAttack();
+                attackPlayer();
+                enemyAttacked = true;
+            }
+            else if (countdown >= 1)
+            {
+                battleLog.SetActive(true);
+            }
+
+            if(doCountdown)
             {
                 countdown = countdown + Time.deltaTime;
             }
@@ -113,5 +157,10 @@ public class Battle : MonoBehaviour {
                 skill = enemy.GetComponent<Enemy>().skill4;
                 break;
         }
+    }
+
+    public void playerUsedAttack()
+    {
+        attackButtonPressed = true;
     }
 }
