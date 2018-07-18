@@ -36,24 +36,20 @@ public class ItemMenu : MonoBehaviour {
         {
             player.GetComponent<Player>().health = 100;
         }
-        disablePlayerTurn();
     }
     public void useManaPotion()
     {
         player.GetComponent<Player>().manaPotionCount--;
-        disablePlayerTurn();
     }
     public void useAttackPotion()
     {
         player.GetComponent<Player>().attackPotionCount--;
         player.GetComponent<Player>().attackDamage = player.GetComponent<Player>().attackDamage * 1.5f;
-        disablePlayerTurn();
     }
     public void useDefensePotion()
     {
         player.GetComponent<Player>().defensePotionCount--;
         player.GetComponent<Player>().defense = player.GetComponent<Player>().defense + 5;
-        disablePlayerTurn();
     }
 
     public void disablePlayerTurn()

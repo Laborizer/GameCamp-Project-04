@@ -3344,7 +3344,6 @@ MonoBehaviour:
   items: {fileID: 246277367}
   buttons: {fileID: 1715567778}
   gameOverUI: {fileID: 925748461}
-  randomizeDone: 0
 --- !u!1 &672306364
 GameObject:
   m_ObjectHideFlags: 0

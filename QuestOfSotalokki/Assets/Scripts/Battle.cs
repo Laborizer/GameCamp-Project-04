@@ -20,11 +20,10 @@ public class Battle : MonoBehaviour {
     bool doCountdown;
     bool actionDone;
     bool attackButtonPressed;
-    bool playerTurn;
     bool enemyAttacked;
     int skill;
     float countdown;
-    public bool randomizeDone;
+    bool randomizeDone;
 
     bool healthPotionButtonPressed;
     bool manaPotionButtonPressed;
@@ -36,7 +35,6 @@ public class Battle : MonoBehaviour {
         randomizeDone = false;
         doCountdown = false;
         actionDone = false;
-        playerTurn = true;
         countdown = 0;
         attackButtonPressed = false;
         enemyAttacked = false;
@@ -46,13 +44,19 @@ public class Battle : MonoBehaviour {
 	void Update () {
         enemy = GameObject.Find("Enemy");
         inBattle = cameras.GetComponent<CameraSwitch>().inBattle;
-        playerTurn = items.GetComponent<ItemMenu>().playerTurn;
 
         if(inBattle)
         {
-            combat();
-            checkAttack();
-            checkPotions();
+            if(!items.GetComponent<ItemMenu>().playerTurn)
+            {
+                combat();
+            }
+            else if(items.GetComponent<ItemMenu>().playerTurn)
+            {
+                buttons.SetActive(true);
+                checkAttack();
+                checkPotions();
+            }
         }
         else
         {
@@ -72,7 +76,7 @@ public class Battle : MonoBehaviour {
 
     private void checkAttack()
     {
-        if (attackButtonPressed && playerTurn)
+        if (attackButtonPressed && items.GetComponent<ItemMenu>().playerTurn)
         {
             playerAttack();
         }
@@ -80,22 +84,22 @@ public class Battle : MonoBehaviour {
 
     private void checkPotions()
     {
-        if (healthPotionButtonPressed && playerTurn)
+        if (healthPotionButtonPressed && items.GetComponent<ItemMenu>().playerTurn)
         {
             buttons.GetComponent<BattleButtons>().disableMenus();
             useHealthPotion();
         }
-        else if (manaPotionButtonPressed && playerTurn)
+        else if (manaPotionButtonPressed && items.GetComponent<ItemMenu>().playerTurn)
         {
             buttons.GetComponent<BattleButtons>().disableMenus();
             useManaPotion();
         }
-        else if (attackPotionButtonPressed && playerTurn)
+        else if (attackPotionButtonPressed && items.GetComponent<ItemMenu>().playerTurn)
         {
             buttons.GetComponent<BattleButtons>().disableMenus();
             useAttackPotion();
         }
-        else if (defensePotionButtonPressed && playerTurn)
+        else if (defensePotionButtonPressed && items.GetComponent<ItemMenu>().playerTurn)
         {
             buttons.GetComponent<BattleButtons>().disableMenus();
             useDefensePotion();
@@ -251,12 +255,12 @@ public class Battle : MonoBehaviour {
 
     private void combat()
     {
-        if(!playerTurn)
+        if(!items.GetComponent<ItemMenu>().playerTurn)
         {
             doCountdown = true;
             buttons.SetActive(false);
 
-            if (countdown >= 4)
+            if (countdown > 4)
             {
                 doCountdown = false;
                 items.GetComponent<ItemMenu>().playerTurn = true;
@@ -282,10 +286,6 @@ public class Battle : MonoBehaviour {
             {
                 countdown = countdown + Time.deltaTime;
             }
-        }
-        else
-        {
-            buttons.SetActive(true);
         }
     }
 
