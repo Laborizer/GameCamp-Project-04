@@ -5763,6 +5763,7 @@ MonoBehaviour:
   attack: {fileID: 1989800357}
   specialMenu: {fileID: 612065557}
   itemMenu: {fileID: 246277367}
+  battle: {fileID: 615604402}
 --- !u!1 &1812850069
 GameObject:
   m_ObjectHideFlags: 0

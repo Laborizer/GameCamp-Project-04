@@ -44,11 +44,11 @@ public class Enemy : MonoBehaviour {
             transform.position = Vector3.MoveTowards(transform.position, target.position, step);
         }
 
-        if (health <= 0)
+        /*if (health <= 0)
         {
             this.gameObject.SetActive(false);
             player.GetComponent<Player>().setMove(true);
-        }
+        }*/
     }
 
     public void SetBattle(bool result)
