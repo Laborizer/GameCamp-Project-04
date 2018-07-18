@@ -6174,7 +6174,6 @@ MonoBehaviour:
   attack: {fileID: 1989800357}
   specialMenu: {fileID: 612065557}
   itemMenu: {fileID: 246277367}
-<<<<<<< HEAD
 --- !u!1 &1715948584
 GameObject:
   m_ObjectHideFlags: 0
@@ -6329,9 +6328,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1715948584}
-=======
-  battle: {fileID: 615604402}
->>>>>>> 29a522a9caea8c99a00c86037ed104460c85f3b6
 --- !u!1 &1812850069
 GameObject:
   m_ObjectHideFlags: 0
