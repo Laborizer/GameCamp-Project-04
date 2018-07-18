@@ -3,9 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class TalkTrigger : MonoBehaviour {
     public GameObject dialogueBox;
+    public TextMeshProUGUI text;
     private bool isTalking;
 
     private void Start()
@@ -37,7 +39,7 @@ public class TalkTrigger : MonoBehaviour {
 
         if (col.gameObject.tag == "PlayerTag" && this.gameObject.tag == "Enemy" && !isTalking)
         {
-            dialogueBox.GetComponentInChildren<Text>().text = transform.parent.GetComponent<Enemy>().getName() + ":\n" + transform.parent.GetComponent<Enemy>().getText();
+            text.text = transform.parent.GetComponent<Enemy>().getName() + ":\n" + transform.parent.GetComponent<Enemy>().getText();
             dialogueBox.SetActive(true);
             transform.parent.GetComponent<Enemy>().SetWalk(false);
             isTalking = true;
@@ -45,7 +47,7 @@ public class TalkTrigger : MonoBehaviour {
 
         if (col.gameObject.tag == "PlayerTag" && Input.GetKeyDown(KeyCode.E) && this.gameObject.tag == "NPC")
         {
-            dialogueBox.GetComponentInChildren<Text>().text = transform.parent.GetComponent<NPC>().getName() + ":\n" + transform.parent.GetComponent<NPC>().getText();
+            text.text = transform.parent.GetComponent<NPC>().getName() + ":\n" + transform.parent.GetComponent<NPC>().getText();
 
             if (!isTalking)
             {

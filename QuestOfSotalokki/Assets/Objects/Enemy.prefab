@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 65576992614670582}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,7 +70,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1673581803104238}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0.05, z: 1.238}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 0}
+  text: {fileID: 0}
 --- !u!114 &114714244869631068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -182,11 +183,15 @@ MonoBehaviour:
   health: 100
   speed: 1
   target: {fileID: 0}
-  talk: 
-  skill1: 0
-  skill2: 0
-  skill3: 0
-  skill4: 0
+  talk: What is of u lookings? DIE!
+  skill1: 5
+  skill1Name: Tackle
+  skill2: 15
+  skill2Name: Kick
+  skill3: 25
+  skill3Name: Waterbubble
+  skill4: 30
+  skill4Name: Water Spit
 --- !u!114 &114848186910089604
 MonoBehaviour:
   m_ObjectHideFlags: 1
