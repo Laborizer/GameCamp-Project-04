@@ -12,6 +12,7 @@ public class BattleButtons : MonoBehaviour {
     public GameObject attack;
     public GameObject specialMenu;
     public GameObject itemMenu;
+    public GameObject battle;
 
     // Use this for initialization
     void Start () {
@@ -41,10 +42,6 @@ public class BattleButtons : MonoBehaviour {
         if (enemy != null)
         {
             enemy.GetComponent<Enemy>().health = enemy.GetComponent<Enemy>().health - player.GetComponent<Player>().attackDamage;
-            if (enemy.GetComponent<Enemy>().health <= 0)
-            {
-                enemy.GetComponent<Enemy>().SetBattle(false);
-            }
         }
     }
 

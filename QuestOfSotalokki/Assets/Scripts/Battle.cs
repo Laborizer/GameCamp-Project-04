@@ -47,11 +47,17 @@ public class Battle : MonoBehaviour {
 
         if(inBattle)
         {
-            if(!items.GetComponent<ItemMenu>().playerTurn)
+            if (enemy.GetComponent<Enemy>().health <= 0 && countdown == 0)
+            {
+                enemy.GetComponent<Enemy>().SetBattle(false);
+                enemy.GetComponent<Enemy>().gameObject.SetActive(false);
+                player.GetComponent<Player>().setMove(true);
+            }
+            if (!items.GetComponent<ItemMenu>().playerTurn && inBattle)
             {
                 combat();
             }
-            else if(items.GetComponent<ItemMenu>().playerTurn)
+            else if(items.GetComponent<ItemMenu>().playerTurn && inBattle)
             {
                 buttons.SetActive(true);
                 checkAttack();
