@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Battle : MonoBehaviour {
 
@@ -285,7 +286,7 @@ public class Battle : MonoBehaviour {
                 battleLog.SetActive(true);
                 enemyRandomizeAttack();
                 randomizeDone = true;
-                battleLog.GetComponentInChildren<Text>().text = "Enemy uses " + enemySkillName + "!";
+                battleLog.GetComponentInChildren<TextMeshProUGUI>().text = "Enemy uses " + enemySkillName + "!";
             }
 
             if(doCountdown)
@@ -331,7 +332,7 @@ public class Battle : MonoBehaviour {
     {
         if(player.GetComponent<Player>().healtPotionCount>0)
         {
-            battleLog.GetComponentInChildren<Text>().text = "Player uses Health Potion!";
+            battleLog.GetComponentInChildren<TextMeshProUGUI>().text = "Player uses Health Potion!";
             healthPotionButtonPressed = true;
         }
     }
@@ -339,7 +340,7 @@ public class Battle : MonoBehaviour {
     {
         if (player.GetComponent<Player>().manaPotionCount > 0)
         {
-            battleLog.GetComponentInChildren<Text>().text = "Player uses Mana Potion!";
+            battleLog.GetComponentInChildren<TextMeshProUGUI>().text = "Player uses Mana Potion!";
             manaPotionButtonPressed = true;
         }
     }
@@ -347,7 +348,7 @@ public class Battle : MonoBehaviour {
     {
         if (player.GetComponent<Player>().attackPotionCount > 0)
         {
-            battleLog.GetComponentInChildren<Text>().text = "Player uses Attack Potion!";
+            battleLog.GetComponentInChildren<TextMeshProUGUI>().text = "Player uses Attack Potion!";
             attackPotionButtonPressed = true;
         }
     }
@@ -355,13 +356,13 @@ public class Battle : MonoBehaviour {
     {
         if (player.GetComponent<Player>().defensePotionCount > 0)
         {
-            battleLog.GetComponentInChildren<Text>().text = "Player uses Defense Potion!";
+            battleLog.GetComponentInChildren<TextMeshProUGUI>().text = "Player uses Defense Potion!";
             defensePotionButtonPressed = true;
         }
     }
     public void playerUsedAttack()
     {
         attackButtonPressed = true;
-        battleLog.GetComponentInChildren<Text>().text = "Player attacks!";
+        battleLog.GetComponentInChildren<TextMeshProUGUI>().text = "Player attacks!";
     }
 }

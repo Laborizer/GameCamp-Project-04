@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ItemMenu : MonoBehaviour {
 
@@ -22,10 +23,10 @@ public class ItemMenu : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        healthPotionButton.GetComponentInChildren<Text>().text = "Health potion x " + player.GetComponent<Player>().healtPotionCount;
-        manaPotionButton.GetComponentInChildren<Text>().text = "Mana potion x " + player.GetComponent<Player>().manaPotionCount;
-        attackPotionButton.GetComponentInChildren<Text>().text = "Attack potion x " + player.GetComponent<Player>().attackPotionCount;
-        defensePotionButton.GetComponentInChildren<Text>().text = "Defense potion x " + player.GetComponent<Player>().defensePotionCount;
+        healthPotionButton.GetComponentInChildren<TextMeshProUGUI>().text = "Health potion x " + player.GetComponent<Player>().healtPotionCount;
+        manaPotionButton.GetComponentInChildren<TextMeshProUGUI>().text = "Mana potion x " + player.GetComponent<Player>().manaPotionCount;
+        attackPotionButton.GetComponentInChildren<TextMeshProUGUI>().text = "Attack potion x " + player.GetComponent<Player>().attackPotionCount;
+        defensePotionButton.GetComponentInChildren<TextMeshProUGUI>().text = "Defense potion x " + player.GetComponent<Player>().defensePotionCount;
     }
 
     public void useHealthPotion()
