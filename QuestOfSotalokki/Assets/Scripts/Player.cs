@@ -16,6 +16,14 @@ public class Player : MonoBehaviour {
     public int attackPotionCount;
     public int defensePotionCount;
 
+    // 0 = name, 1 = damage, 2 = cost
+    public String[] special1;
+    public String[] special2;
+    public String[] special3;
+    public String[] special4;
+    // int.Parse(special1[1]);
+    //String[] frostExplosion = new string[3];
+
     private Rigidbody rb;
     private Vector3 moveInput;
     private Vector3 moveVelocity;
