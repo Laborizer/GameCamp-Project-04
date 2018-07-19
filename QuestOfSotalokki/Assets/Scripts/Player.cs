@@ -6,6 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
     public float health;
+    public float mana;
     public float moveSpeed;
     public float attackDamage;
     public float defense;
