@@ -25,14 +25,22 @@ public class Battle : MonoBehaviour {
     int skill;
     float countdown;
     bool randomizeDone;
+    bool specialInUse;
 
     bool healthPotionButtonPressed;
     bool manaPotionButtonPressed;
     bool attackPotionButtonPressed;
     bool defensePotionButtonPressed;
 
+    bool special1ButtonPressed;
+    bool special2ButtonPressed;
+    bool special3ButtonPressed;
+    bool special4ButtonPressed;
+    public String[] specialSkill = new string[3];
+
     // Use this for initialization
     void Start () {
+        specialInUse = false;
         randomizeDone = false;
         doCountdown = false;
         actionDone = false;
@@ -62,6 +70,7 @@ public class Battle : MonoBehaviour {
             {
                 buttons.SetActive(true);
                 checkAttack();
+                checkSpecial();
                 checkPotions();
             }
         }
@@ -79,6 +88,76 @@ public class Battle : MonoBehaviour {
             cameras.GetComponent<CameraSwitch>().setInBattle(false);
             player.GetComponent<Player>().Die();
             gameOverUI.SetActive(true);
+        }
+    }
+
+    private void checkSpecial()
+    {
+        if (special1ButtonPressed && items.GetComponent<ItemMenu>().playerTurn)
+        {
+            specialSkill = player.GetComponent<Player>().special1;
+        }
+        else if (special2ButtonPressed && items.GetComponent<ItemMenu>().playerTurn)
+        {
+            specialSkill = player.GetComponent<Player>().special2;
+        }
+        else if (special3ButtonPressed && items.GetComponent<ItemMenu>().playerTurn)
+        {
+            specialSkill = player.GetComponent<Player>().special3;
+        }
+        else if (special4ButtonPressed && items.GetComponent<ItemMenu>().playerTurn)
+        {
+            specialSkill = player.GetComponent<Player>().special4;
+        }
+
+        if((special1ButtonPressed || special2ButtonPressed || special3ButtonPressed || special4ButtonPressed) && items.GetComponent<ItemMenu>().playerTurn &&
+            ((player.GetComponent<Player>().mana - int.Parse(specialSkill[2]) >= 0) || specialInUse))
+        {
+            specialInUse = true;
+            buttons.GetComponent<BattleButtons>().disableMenus();
+            battleLog.GetComponentInChildren<TextMeshProUGUI>().text = "Player uses " + specialSkill[0] + "!";
+            useSpecialSkill();
+        }
+        else
+        {
+            specialInUse = false;
+            special1ButtonPressed = false;
+            special2ButtonPressed = false;
+            special3ButtonPressed = false;
+            special4ButtonPressed = false;
+        }
+    }
+
+    private void useSpecialSkill()
+    {
+        buttons.SetActive(false);
+        doCountdown = true;
+
+        if (countdown >= 4)
+        {
+            doCountdown = false;
+            actionDone = false;
+            countdown = 0;
+            battleLog.SetActive(false);
+            special1ButtonPressed = false;
+            special2ButtonPressed = false;
+            special3ButtonPressed = false;
+            special4ButtonPressed = false;
+            items.GetComponent<ItemMenu>().playerTurn = false;
+        }
+        else if (countdown >= 3 && !actionDone)
+        {
+            buttons.GetComponent<BattleButtons>().useSpecialSkill();
+            actionDone = true;
+        }
+        else if (countdown >= 1)
+        {
+            battleLog.SetActive(true);
+        }
+
+        if (doCountdown)
+        {
+            countdown = countdown + Time.deltaTime;
         }
     }
 
@@ -365,5 +444,22 @@ public class Battle : MonoBehaviour {
     {
         attackButtonPressed = true;
         battleLog.GetComponentInChildren<TextMeshProUGUI>().text = "Player attacks!";
+    }
+
+    public void usedSpecial1()
+    {
+        special1ButtonPressed = true;
+    }
+    public void usedSpecial2()
+    {
+        special2ButtonPressed = true;
+    }
+    public void usedSpecial3()
+    {
+        special3ButtonPressed = true;
+    }
+    public void usedSpecial4()
+    {
+        special4ButtonPressed = true;
     }
 }

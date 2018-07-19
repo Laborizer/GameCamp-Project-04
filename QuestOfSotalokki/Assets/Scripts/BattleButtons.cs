@@ -44,6 +44,14 @@ public class BattleButtons : MonoBehaviour {
             enemy.GetComponent<Enemy>().health = enemy.GetComponent<Enemy>().health - player.GetComponent<Player>().attackDamage;
         }
     }
+    public void useSpecialSkill()
+    {
+        if (enemy != null)
+        {
+            enemy.GetComponent<Enemy>().health = enemy.GetComponent<Enemy>().health - int.Parse(battle.GetComponent<Battle>().specialSkill[1]);
+            player.GetComponent<Player>().mana = player.GetComponent<Player>().mana - int.Parse(battle.GetComponent<Battle>().specialSkill[2]);
+        }
+    }
 
     public void disableMenus()
     {

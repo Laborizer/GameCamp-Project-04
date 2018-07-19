@@ -41,6 +41,11 @@ public class ItemMenu : MonoBehaviour {
     public void useManaPotion()
     {
         player.GetComponent<Player>().manaPotionCount--;
+        player.GetComponent<Player>().mana = player.GetComponent<Player>().mana + 50;
+        if (player.GetComponent<Player>().mana > 100)
+        {
+            player.GetComponent<Player>().mana = 100;
+        }
     }
     public void useAttackPotion()
     {
