@@ -40,8 +40,9 @@ GameObject:
   - component: {fileID: 54733427767129466}
   - component: {fileID: 114714244869631068}
   - component: {fileID: 65576992614670582}
+  - component: {fileID: 95807814551500330}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: EnemyELP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +72,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1673581803104238}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.05, z: 1.238}
+  m_LocalPosition: {x: 0, y: 0, z: 1.238}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4975468285663826}
@@ -156,6 +157,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 0.9, z: 0.20000005}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &95807814551500330
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1673581803104238}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 29411aa39eeebe3418d767839f8510bf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114308693783620324
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -237,7 +256,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 73b2f30901905f4419a71b192d0431ac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
