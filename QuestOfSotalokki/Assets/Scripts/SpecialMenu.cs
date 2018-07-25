@@ -26,10 +26,10 @@ public class SpecialMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        special1Button.GetComponentInChildren<TextMeshProUGUI>().text = player.GetComponent<Player>().special1[0];
-        special2Button.GetComponentInChildren<TextMeshProUGUI>().text = player.GetComponent<Player>().special2[0];
-        special3Button.GetComponentInChildren<TextMeshProUGUI>().text = player.GetComponent<Player>().special3[0];
-        special4Button.GetComponentInChildren<TextMeshProUGUI>().text = player.GetComponent<Player>().special4[0];
+        special1Button.GetComponentInChildren<TextMeshProUGUI>().text = player.GetComponent<Player>().special1[0] + " " + player.GetComponent<Player>().special1[2];
+        special2Button.GetComponentInChildren<TextMeshProUGUI>().text = player.GetComponent<Player>().special2[0] + " " + player.GetComponent<Player>().special2[2];
+        special3Button.GetComponentInChildren<TextMeshProUGUI>().text = player.GetComponent<Player>().special3[0] + " " + player.GetComponent<Player>().special3[2];
+        special4Button.GetComponentInChildren<TextMeshProUGUI>().text = player.GetComponent<Player>().special4[0] + " " + player.GetComponent<Player>().special4[2];
     }
 
     public void useHealthPotion()
