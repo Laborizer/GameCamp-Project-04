@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Player : MonoBehaviour {
 
@@ -29,7 +30,10 @@ public class Player : MonoBehaviour {
     private Vector3 moveVelocity;
     private Boolean canMove;
 
-	void Start () {
+    public GameObject dialogueBox;
+    public TextMeshProUGUI text;
+
+    void Start () {
         canMove = true;
         rb = GetComponent<Rigidbody>();
         attackDamage = 20;
@@ -42,7 +46,12 @@ public class Player : MonoBehaviour {
         {
             Move();
         }
-	}
+        if (Input.GetKeyDown(KeyCode.E) && dialogueBox.activeSelf)
+        {
+            dialogueBox.SetActive(false);
+            setMove(true);
+        }
+    }
 
     public void Die()
     {
@@ -58,22 +67,31 @@ public class Player : MonoBehaviour {
 
     internal void givePotion(string itemName)
     {
+        string name = "";
         if (itemName == "HealtPotion")
         {
             healtPotionCount++;
+            name = "Health potion";
         }
         if (itemName == "ManaPotion")
         {
             manaPotionCount++;
+            name = "Mana potion";
         }
         if (itemName == "AttackPotion")
         {
             attackPotionCount++;
+            name = "Attack potion";
         }
         if (itemName == "DefensePotion")
         {
             defensePotionCount++;
+            name = "Defence potion";
         }
+
+        dialogueBox.SetActive(true);
+        text.text = "You is gettings new " + name;
+        setMove(false);
     }
 
     internal void setMove(bool result)
@@ -83,5 +101,35 @@ public class Player : MonoBehaviour {
         {
             rb.velocity = Vector3.zero;
         }
+    }
+
+    internal void giveSpell(string[] spellInfo)
+    {
+        String infotext = "";
+        if (special1.Equals(null))
+        {
+            special1 = spellInfo;
+            infotext = "You is leaned" + spellInfo[0];
+        } else if (special2.Equals(null))
+        {
+            special2 = spellInfo;
+            infotext = "You is leaned" + spellInfo[0];
+        }
+        else if (special3.Equals(null))
+        {
+            special3 = spellInfo;
+            infotext = "You is leaned" + spellInfo[0];
+        }
+        else if (special4.Equals(null))
+        {
+            special4 = spellInfo;
+            infotext = "You is leaned" + spellInfo[0];
+        } else {
+            // does something
+            infotext = "You is of learned nothings new";
+        }
+        dialogueBox.SetActive(true);
+        text.text = infotext;
+        setMove(false);
     }
 }
