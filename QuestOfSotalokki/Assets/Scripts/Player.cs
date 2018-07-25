@@ -106,25 +106,28 @@ public class Player : MonoBehaviour {
     internal void giveSpell(string[] spellInfo)
     {
         String infotext = "";
-        if (special1.Equals(null))
+        if (special1[0].Equals(""))
         {
             special1 = spellInfo;
-            infotext = "You is leaned" + spellInfo[0];
-        } else if (special2.Equals(null))
+            infotext = "You is leaned " + spellInfo[0];
+        }
+        else if (special2[0].Equals(""))
         {
             special2 = spellInfo;
-            infotext = "You is leaned" + spellInfo[0];
+            infotext = "You is leaned " + spellInfo[0];
         }
-        else if (special3.Equals(null))
+        else if (special3[0].Equals(""))
         {
             special3 = spellInfo;
-            infotext = "You is leaned" + spellInfo[0];
+            infotext = "You is leaned " + spellInfo[0];
         }
-        else if (special4.Equals(null))
+        else if (special4[0].Equals(""))
         {
             special4 = spellInfo;
-            infotext = "You is leaned" + spellInfo[0];
-        } else {
+            infotext = "You is leaned " + spellInfo[0];
+        }
+        else
+        {
             // does something
             infotext = "You is of learned nothings new";
         }

@@ -448,18 +448,30 @@ public class Battle : MonoBehaviour {
 
     public void usedSpecial1()
     {
-        special1ButtonPressed = true;
+        if(player.GetComponent<Player>().special1[0].Length > 0)
+        {
+            special1ButtonPressed = true;
+        }
     }
     public void usedSpecial2()
     {
-        special2ButtonPressed = true;
+        if (player.GetComponent<Player>().special2[0].Length > 0)
+        {
+            special2ButtonPressed = true;
+        }
     }
     public void usedSpecial3()
     {
-        special3ButtonPressed = true;
+        if (player.GetComponent<Player>().special3[0].Length > 0)
+        {
+            special3ButtonPressed = true;
+        }
     }
     public void usedSpecial4()
     {
-        special4ButtonPressed = true;
+        if (player.GetComponent<Player>().special4[0].Length > 0)
+        {
+            special4ButtonPressed = true;
+        }
     }
 }
