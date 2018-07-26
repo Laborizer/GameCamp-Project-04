@@ -7,25 +7,13 @@ using TMPro;
 
 public class TalkTrigger : MonoBehaviour {
     public GameObject dialogueBox;
+    public GameObject Buttons;
     public TextMeshProUGUI text;
     private bool isTalking;
-    public float timeLeft = 20;
-    bool HandGameAct = false;
 
     private void Start()
     {
         isTalking = false;
-    }
-    private void Update()
-    {
-        if (HandGameAct)
-        {
-            timeLeft -= Time.deltaTime;
-            if (timeLeft < 0)
-            {
-                transform.parent.GetComponent<NPC>().setHandgame(true);
-            }
-        }
     }
 
     private void OnTriggerStay(Collider col)
@@ -64,8 +52,7 @@ public class TalkTrigger : MonoBehaviour {
 
             if (transform.parent.GetComponent<NPC>().getName() == "NPCStart")
             {
-                HandGameAct = true;
-                transform.parent.GetComponent<NPC>().SetWalk(false);
+                Buttons.SetActive(true);
             }
 
             if (!isTalking)
@@ -90,6 +77,10 @@ public class TalkTrigger : MonoBehaviour {
         }
         else if (col.gameObject.tag == "PlayerTag" && this.gameObject.tag == "NPC")
         {
+            if (transform.parent.GetComponent<NPC>().getName() == "NPCStart")
+            {
+                Buttons.SetActive(false);
+            }
             dialogueBox.SetActive(false);
             isTalking = false;
         }

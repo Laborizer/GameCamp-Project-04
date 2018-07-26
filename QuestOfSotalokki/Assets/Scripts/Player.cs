@@ -14,6 +14,7 @@ public class Player : MonoBehaviour {
 
     public int healtPotionCount;
     public int manaPotionCount;
+
     public int attackPotionCount;
     public int defensePotionCount;
 
@@ -134,5 +135,10 @@ public class Player : MonoBehaviour {
         dialogueBox.SetActive(true);
         text.text = infotext;
         setMove(false);
+    }
+
+    internal void startPos()
+    {
+        transform.position = new Vector3(0,0,0);
     }
 }
