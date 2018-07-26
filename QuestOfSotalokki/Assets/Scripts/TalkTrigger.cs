@@ -9,10 +9,23 @@ public class TalkTrigger : MonoBehaviour {
     public GameObject dialogueBox;
     public TextMeshProUGUI text;
     private bool isTalking;
+    public float timeLeft = 20;
+    bool HandGameAct = false;
 
     private void Start()
     {
         isTalking = false;
+    }
+    private void Update()
+    {
+        if (HandGameAct)
+        {
+            timeLeft -= Time.deltaTime;
+            if (timeLeft < 0)
+            {
+                transform.parent.GetComponent<NPC>().setHandgame(true);
+            }
+        }
     }
 
     private void OnTriggerStay(Collider col)
@@ -48,6 +61,12 @@ public class TalkTrigger : MonoBehaviour {
         if (col.gameObject.tag == "PlayerTag" && Input.GetKeyDown(KeyCode.E) && this.gameObject.tag == "NPC")
         {
             text.text = transform.parent.GetComponent<NPC>().getName() + ":\n" + transform.parent.GetComponent<NPC>().getText();
+
+            if (transform.parent.GetComponent<NPC>().getName() == "NPCStart")
+            {
+                HandGameAct = true;
+                transform.parent.GetComponent<NPC>().SetWalk(false);
+            }
 
             if (!isTalking)
             {
