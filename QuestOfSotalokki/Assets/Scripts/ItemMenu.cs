@@ -50,12 +50,12 @@ public class ItemMenu : MonoBehaviour {
     public void useAttackPotion()
     {
         player.GetComponent<Player>().attackPotionCount--;
-        player.GetComponent<Player>().attackDamage = player.GetComponent<Player>().attackDamage * 1.5f;
+        player.GetComponent<Player>().attackDamage = player.GetComponent<Player>().attackDamage * 2f;
     }
     public void useDefensePotion()
     {
         player.GetComponent<Player>().defensePotionCount--;
-        player.GetComponent<Player>().defense = player.GetComponent<Player>().defense + 5;
+        player.GetComponent<Player>().defense = player.GetComponent<Player>().defense + 10;
     }
 
     public void disablePlayerTurn()

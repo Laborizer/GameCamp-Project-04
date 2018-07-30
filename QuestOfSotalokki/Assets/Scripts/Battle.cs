@@ -216,7 +216,6 @@ public class Battle : MonoBehaviour {
             countdown = 0;
             battleLog.SetActive(false);
             healthPotionButtonPressed = false;
-            items.GetComponent<ItemMenu>().playerTurn = false;
         }
         else if (countdown >= 3 && !actionDone)
         {
@@ -245,7 +244,6 @@ public class Battle : MonoBehaviour {
             countdown = 0;
             battleLog.SetActive(false);
             manaPotionButtonPressed = false;
-            items.GetComponent<ItemMenu>().playerTurn = false;
         }
         else if (countdown >= 3 && !actionDone)
         {
@@ -274,7 +272,6 @@ public class Battle : MonoBehaviour {
             countdown = 0;
             battleLog.SetActive(false);
             attackPotionButtonPressed = false;
-            items.GetComponent<ItemMenu>().playerTurn = false;
         }
         else if (countdown >= 3 && !actionDone)
         {
@@ -303,7 +300,6 @@ public class Battle : MonoBehaviour {
             countdown = 0;
             battleLog.SetActive(false);
             defensePotionButtonPressed = false;
-            items.GetComponent<ItemMenu>().playerTurn = false;
         }
         else if (countdown >= 3 && !actionDone)
         {
