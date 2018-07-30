@@ -16,6 +16,7 @@ public class Battle : MonoBehaviour {
     public GameObject items;
     public GameObject buttons;
     public GameObject gameOverUI;
+    public GameObject gameWinUI;
 
     String enemySkillName;
     bool doCountdown;
@@ -38,6 +39,8 @@ public class Battle : MonoBehaviour {
     bool special4ButtonPressed;
     public String[] specialSkill = new string[3];
 
+    bool GameWin;
+
     // Use this for initialization
     void Start () {
         specialInUse = false;
@@ -47,7 +50,8 @@ public class Battle : MonoBehaviour {
         countdown = 0;
         attackButtonPressed = false;
         enemyAttacked = false;
-	}
+        GameWin = false;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -58,6 +62,11 @@ public class Battle : MonoBehaviour {
         {
             if (enemy.GetComponent<Enemy>().health <= 0 && countdown == 0)
             {
+                if (enemy.GetComponent<Enemy>().getRealName() == "FinalBoss")
+                {
+                    gameWinUI.gameObject.SetActive(true);
+                    GameWin = true;
+                }
                 enemy.GetComponent<Enemy>().SetBattle(false);
                 enemy.GetComponent<Enemy>().gameObject.SetActive(false);
                 player.GetComponent<Player>().setMove(true);
@@ -88,6 +97,10 @@ public class Battle : MonoBehaviour {
             cameras.GetComponent<CameraSwitch>().setInBattle(false);
             player.GetComponent<Player>().Die();
             gameOverUI.SetActive(true);
+        }
+        if (GameWin)
+        {
+            player.GetComponent<Player>().setMove(false);
         }
     }
 

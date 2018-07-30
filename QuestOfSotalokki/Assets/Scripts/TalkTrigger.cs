@@ -8,7 +8,9 @@ using TMPro;
 public class TalkTrigger : MonoBehaviour {
     public GameObject dialogueBox;
     public GameObject Buttons;
+    public GameObject Enemy;
     public TextMeshProUGUI text;
+    public string enemyName;
     private bool isTalking;
 
     private void Start()
@@ -20,8 +22,14 @@ public class TalkTrigger : MonoBehaviour {
     {
         if (col.gameObject.tag == "PlayerTag" && this.gameObject.tag != "NPC")
         {
+            enemyName = transform.parent.name;
             transform.parent.name = "Enemy";
             transform.parent.tag = "Enemy";
+            if (enemyName == "FinalBoss")
+            {
+                Enemy = GameObject.Find("Enemy");
+                Enemy.GetComponent<Enemy>().giveName(enemyName);
+            }
         }
 
         if (col.gameObject.tag == "PlayerTag" && Input.GetKeyDown(KeyCode.E) && this.gameObject.tag == "Enemy")

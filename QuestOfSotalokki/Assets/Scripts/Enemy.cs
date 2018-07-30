@@ -7,6 +7,8 @@ public class Enemy : MonoBehaviour {
 
     public float health;
 
+    public string EnemyName;
+
     GameObject cameraSwitch;
     GameObject player;
     Boolean walk;
@@ -43,12 +45,11 @@ public class Enemy : MonoBehaviour {
             float step = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, target.position, step);
         }
+    }
 
-        /*if (health <= 0)
-        {
-            this.gameObject.SetActive(false);
-            player.GetComponent<Player>().setMove(true);
-        }*/
+    internal void giveName(string enemyName)
+    {
+        EnemyName = enemyName;
     }
 
     public void SetBattle(bool result)
@@ -70,5 +71,10 @@ public class Enemy : MonoBehaviour {
     internal string getName()
     {
         return this.gameObject.name;
+    }
+
+    internal string getRealName()
+    {
+        return EnemyName;
     }
 }
