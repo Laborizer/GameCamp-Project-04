@@ -6,6 +6,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour {
 
     public float health;
+    public String weakness;
 
     public string EnemyName;
 

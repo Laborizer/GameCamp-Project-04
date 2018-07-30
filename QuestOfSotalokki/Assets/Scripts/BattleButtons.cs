@@ -52,8 +52,18 @@ public class BattleButtons : MonoBehaviour {
     {
         if (enemy != null)
         {
-            enemy.GetComponent<Enemy>().health = enemy.GetComponent<Enemy>().health - int.Parse(battle.GetComponent<Battle>().specialSkill[1]);
-            player.GetComponent<Player>().mana = player.GetComponent<Player>().mana - int.Parse(battle.GetComponent<Battle>().specialSkill[2]);
+            // Weakness to used skill
+            if(enemy.GetComponent<Enemy>().weakness.Equals(battle.GetComponent<Battle>().specialSkill[0]))
+            {
+                enemy.GetComponent<Enemy>().health = enemy.GetComponent<Enemy>().health - (int.Parse(battle.GetComponent<Battle>().specialSkill[1]) * 2);
+                player.GetComponent<Player>().mana = player.GetComponent<Player>().mana - int.Parse(battle.GetComponent<Battle>().specialSkill[2]);
+            }
+            // No weakness to used skill
+            else
+            {
+                enemy.GetComponent<Enemy>().health = enemy.GetComponent<Enemy>().health - int.Parse(battle.GetComponent<Battle>().specialSkill[1]);
+                player.GetComponent<Player>().mana = player.GetComponent<Player>().mana - int.Parse(battle.GetComponent<Battle>().specialSkill[2]);
+            }
         }
     }
 

@@ -2240,6 +2240,11 @@ Prefab:
       propertyPath: text
       value: 
       objectReference: {fileID: 366018222}
+    - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
+        type: 2}
+      propertyPath: weakness
+      value: Shotgun
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
   m_IsPrefabParent: 0
@@ -4585,6 +4590,16 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.0000005
       objectReference: {fileID: 0}
+    - target: {fileID: 114235859031672010, guid: 08de54d4a26401d4682783a19975e90a,
+        type: 2}
+      propertyPath: SpellInfo.Array.data[1]
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114235859031672010, guid: 08de54d4a26401d4682783a19975e90a,
+        type: 2}
+      propertyPath: SpellInfo.Array.data[2]
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08de54d4a26401d4682783a19975e90a, type: 2}
   m_IsPrefabParent: 0
@@ -6360,6 +6375,11 @@ Prefab:
       propertyPath: text
       value: 
       objectReference: {fileID: 366018222}
+    - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
+        type: 2}
+      propertyPath: weakness
+      value: Thunder
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
   m_IsPrefabParent: 0
@@ -7329,6 +7349,16 @@ Prefab:
         type: 2}
       propertyPath: SpellInfo.Array.data[3]
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114235859031672010, guid: 08de54d4a26401d4682783a19975e90a,
+        type: 2}
+      propertyPath: SpellInfo.Array.data[1]
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 114235859031672010, guid: 08de54d4a26401d4682783a19975e90a,
+        type: 2}
+      propertyPath: SpellInfo.Array.data[2]
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08de54d4a26401d4682783a19975e90a, type: 2}
@@ -15203,6 +15233,11 @@ Prefab:
       propertyPath: text
       value: 
       objectReference: {fileID: 366018222}
+    - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
+        type: 2}
+      propertyPath: weakness
+      value: Ice
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
   m_IsPrefabParent: 0
@@ -15806,6 +15841,16 @@ Prefab:
         type: 2}
       propertyPath: SpellInfo.Array.data[0]
       value: Thunder
+      objectReference: {fileID: 0}
+    - target: {fileID: 114235859031672010, guid: 08de54d4a26401d4682783a19975e90a,
+        type: 2}
+      propertyPath: SpellInfo.Array.data[1]
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 114235859031672010, guid: 08de54d4a26401d4682783a19975e90a,
+        type: 2}
+      propertyPath: SpellInfo.Array.data[2]
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08de54d4a26401d4682783a19975e90a, type: 2}
@@ -16473,6 +16518,11 @@ Prefab:
     - target: {fileID: 1673581803104238, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
       propertyPath: m_Name
       value: EnemyELP1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
+        type: 2}
+      propertyPath: weakness
+      value: Fire
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
