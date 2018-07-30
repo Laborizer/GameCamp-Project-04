@@ -42,6 +42,10 @@ public class BattleButtons : MonoBehaviour {
         if (enemy != null)
         {
             enemy.GetComponent<Enemy>().health = enemy.GetComponent<Enemy>().health - player.GetComponent<Player>().attackDamage;
+            if(enemy.GetComponent<Enemy>().health < 0)
+            {
+                enemy.GetComponent<Enemy>().health = 0;
+            }
         }
     }
     public void useSpecialSkill()

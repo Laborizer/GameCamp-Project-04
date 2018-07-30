@@ -86,8 +86,6 @@ public class Battle : MonoBehaviour {
         else
         {
             items.GetComponent<ItemMenu>().playerTurn = true;
-            player.GetComponent<Player>().health = 100;
-            player.GetComponent<Player>().mana = 100;
             player.GetComponent<Player>().attackDamage = 20;
             player.GetComponent<Player>().defense = 0;
         }
