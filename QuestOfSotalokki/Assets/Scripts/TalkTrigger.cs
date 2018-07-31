@@ -6,6 +6,8 @@ using UnityEngine.UI;
 using TMPro;
 
 public class TalkTrigger : MonoBehaviour {
+    GameObject soundManager;
+
     public GameObject dialogueBox;
     public GameObject Buttons;
     public GameObject Enemy;
@@ -16,6 +18,7 @@ public class TalkTrigger : MonoBehaviour {
     private void Start()
     {
         isTalking = false;
+        soundManager = GameObject.Find("SoundManager");
     }
 
     private void OnTriggerStay(Collider col)
@@ -48,6 +51,7 @@ public class TalkTrigger : MonoBehaviour {
 
         if (col.gameObject.tag == "PlayerTag" && this.gameObject.tag == "Enemy" && !isTalking)
         {
+            soundManager.GetComponent<SoundManager>().enemyTalkPlay();
             text.text = transform.parent.GetComponent<Enemy>().getName() + ":\n" + transform.parent.GetComponent<Enemy>().getText();
             dialogueBox.SetActive(true);
             transform.parent.GetComponent<Enemy>().SetWalk(false);
@@ -56,6 +60,7 @@ public class TalkTrigger : MonoBehaviour {
 
         if (col.gameObject.tag == "PlayerTag" && Input.GetKeyDown(KeyCode.E) && this.gameObject.tag == "NPC")
         {
+            soundManager.GetComponent<SoundManager>().npcTalkPlay();
             text.text = transform.parent.GetComponent<NPC>().getName() + ":\n" + transform.parent.GetComponent<NPC>().getText();
 
             if (transform.parent.GetComponent<NPC>().getName() == "NPCStart")

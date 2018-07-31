@@ -9,6 +9,8 @@ public class SoundManager : MonoBehaviour {
     public AudioClip button;
     public AudioClip enemyTalk;
     public AudioClip npcTalk;
+    public AudioClip potionPickup;
+    public AudioClip specialLearn;
 
     private void Start()
     {
@@ -28,5 +30,15 @@ public class SoundManager : MonoBehaviour {
     public void npcTalkPlay()
     {
         audiosource.PlayOneShot(npcTalk, 1f);
+    }
+
+    public void potionPickupPlay()
+    {
+        audiosource.PlayOneShot(potionPickup, 1f);
+    }
+
+    public void specialLearnPlay()
+    {
+        audiosource.PlayOneShot(specialLearn, 1f);
     }
 }
