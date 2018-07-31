@@ -6,12 +6,7 @@ using UnityEngine;
 public class NPC : MonoBehaviour {
 
     public string talk;
-    GameObject player;
 
-    private void Start()
-    {
-        player = GameObject.Find("Player");
-    }
     internal string getText()
     {
         return talk;
