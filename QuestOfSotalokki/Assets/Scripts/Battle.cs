@@ -18,6 +18,14 @@ public class Battle : MonoBehaviour {
     public GameObject gameOverUI;
     public GameObject gameWinUI;
 
+    public GameObject EnemyELP;
+    public GameObject EnemyGIF;
+    public GameObject FireBoss;
+    public GameObject IceBoss;
+    public GameObject ThunderBoss;
+    public GameObject ShotgunBoss;
+    public GameObject FinalBoss;
+
     String enemySkillName;
     bool doCountdown;
     bool actionDone;
@@ -58,8 +66,74 @@ public class Battle : MonoBehaviour {
         enemy = GameObject.Find("Enemy");
         inBattle = cameras.GetComponent<CameraSwitch>().inBattle;
 
-        if(inBattle)
+        if (inBattle)
         {
+
+            if (enemy.GetComponent<Enemy>().getRealName() == "EnemyELP")
+            {
+                EnemyELP.gameObject.SetActive(true);
+                EnemyGIF.gameObject.SetActive(false);
+                FireBoss.gameObject.SetActive(false);
+                IceBoss.gameObject.SetActive(false);
+                ThunderBoss.gameObject.SetActive(false);
+                ShotgunBoss.gameObject.SetActive(false);
+                FinalBoss.gameObject.SetActive(false);
+            } else if (enemy.GetComponent<Enemy>().getRealName() == "EnemyGIF")
+            {
+                EnemyELP.gameObject.SetActive(false);
+                EnemyGIF.gameObject.SetActive(true);
+                FireBoss.gameObject.SetActive(false);
+                IceBoss.gameObject.SetActive(false);
+                ThunderBoss.gameObject.SetActive(false);
+                ShotgunBoss.gameObject.SetActive(false);
+                FinalBoss.gameObject.SetActive(false);
+            } else if (enemy.GetComponent<Enemy>().getRealName() == "FinalBoss")
+            {
+                EnemyELP.gameObject.SetActive(false);
+                EnemyGIF.gameObject.SetActive(false);
+                FireBoss.gameObject.SetActive(false);
+                IceBoss.gameObject.SetActive(false);
+                ThunderBoss.gameObject.SetActive(false);
+                ShotgunBoss.gameObject.SetActive(false);
+                FinalBoss.gameObject.SetActive(true);
+            } else if (enemy.GetComponent<Enemy>().getRealName() == "FireBoss")
+            {
+                EnemyELP.gameObject.SetActive(false);
+                EnemyGIF.gameObject.SetActive(false);
+                FireBoss.gameObject.SetActive(true);
+                IceBoss.gameObject.SetActive(false);
+                ThunderBoss.gameObject.SetActive(false);
+                ShotgunBoss.gameObject.SetActive(false);
+                FinalBoss.gameObject.SetActive(false);
+            } else if (enemy.GetComponent<Enemy>().getRealName() == "IceBoss")
+            {
+                EnemyELP.gameObject.SetActive(false);
+                EnemyGIF.gameObject.SetActive(false);
+                FireBoss.gameObject.SetActive(false);
+                IceBoss.gameObject.SetActive(true);
+                ThunderBoss.gameObject.SetActive(false);
+                ShotgunBoss.gameObject.SetActive(false);
+                FinalBoss.gameObject.SetActive(false);
+            } else if (enemy.GetComponent<Enemy>().getRealName() == "ThunderBoss")
+            {
+                EnemyELP.gameObject.SetActive(false);
+                EnemyGIF.gameObject.SetActive(false);
+                FireBoss.gameObject.SetActive(false);
+                IceBoss.gameObject.SetActive(false);
+                ThunderBoss.gameObject.SetActive(true);
+                ShotgunBoss.gameObject.SetActive(false);
+                FinalBoss.gameObject.SetActive(false);
+            } else if (enemy.GetComponent<Enemy>().getRealName() == "ShotgunBoss")
+            {
+                EnemyELP.gameObject.SetActive(false);
+                EnemyGIF.gameObject.SetActive(false);
+                FireBoss.gameObject.SetActive(false);
+                IceBoss.gameObject.SetActive(false);
+                ThunderBoss.gameObject.SetActive(false);
+                ShotgunBoss.gameObject.SetActive(true);
+                FinalBoss.gameObject.SetActive(false);
+            }
+
             if (enemy.GetComponent<Enemy>().health <= 0 && countdown == 0)
             {
                 if (enemy.GetComponent<Enemy>().getRealName() == "FinalBoss")

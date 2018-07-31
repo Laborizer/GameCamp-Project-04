@@ -32,6 +32,30 @@ public class TalkTrigger : MonoBehaviour {
             {
                 Enemy = GameObject.Find("Enemy");
                 Enemy.GetComponent<Enemy>().giveName(enemyName);
+            } else if (enemyName == "EnemyELP")
+            {
+                Enemy = GameObject.Find("Enemy");
+                Enemy.GetComponent<Enemy>().giveName(enemyName);
+            } else if (enemyName == "EnemyGIF")
+            {
+                Enemy = GameObject.Find("Enemy");
+                Enemy.GetComponent<Enemy>().giveName(enemyName);
+            } else if (enemyName == "FireBoss")
+            {
+                Enemy = GameObject.Find("Enemy");
+                Enemy.GetComponent<Enemy>().giveName(enemyName);
+            } else if (enemyName == "IceBoss")
+            {
+                Enemy = GameObject.Find("Enemy");
+                Enemy.GetComponent<Enemy>().giveName(enemyName);
+            } else if (enemyName == "ThunderBoss")
+            {
+                Enemy = GameObject.Find("Enemy");
+                Enemy.GetComponent<Enemy>().giveName(enemyName);
+            } else if (enemyName == "ShotgunBoss")
+            {
+                Enemy = GameObject.Find("Enemy");
+                Enemy.GetComponent<Enemy>().giveName(enemyName);
             }
         }
 
