@@ -15,6 +15,12 @@ public class SoundManager : MonoBehaviour {
     public AudioClip potionPickup;
     public AudioClip specialLearn;
 
+    public AudioClip shotgun;
+    public AudioClip fire;
+    public AudioClip thunder;
+    public AudioClip ice;
+    public AudioClip hit;
+
     private void Start()
     {
         audiosource = GetComponent<AudioSource>();
@@ -31,6 +37,7 @@ public class SoundManager : MonoBehaviour {
         overworldTheme.SetActive(false);
     }
 
+    // sound effects
     public void buttonSoundPlay()
     {
         audiosource.PlayOneShot(button, 2f);
@@ -50,5 +57,27 @@ public class SoundManager : MonoBehaviour {
     public void specialLearnPlay()
     {
         audiosource.PlayOneShot(specialLearn, 3f);
+    }
+
+    // skill sound effects
+    public void shotgunPlay()
+    {
+        audiosource.PlayOneShot(shotgun, 2f);
+    }
+    public void firePlay()
+    {
+        audiosource.PlayOneShot(fire, 2f);
+    }
+    public void thunderPlay()
+    {
+        audiosource.PlayOneShot(thunder, 2f);
+    }
+    public void icePlay()
+    {
+        audiosource.PlayOneShot(ice, 5f);
+    }
+    public void hitPlay()
+    {
+        audiosource.PlayOneShot(hit, 3f);
     }
 }

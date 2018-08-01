@@ -10,6 +10,7 @@ public class Battle : MonoBehaviour {
     public GameObject enemy;
     public GameObject player;
     public GameObject battleLog;
+    public GameObject skillAnimations;
 
     public bool inBattle;
     public GameObject cameras;
@@ -35,6 +36,8 @@ public class Battle : MonoBehaviour {
     float countdown;
     bool randomizeDone;
     bool specialInUse;
+    bool skillAnimationOn;
+    bool animationDone;
 
     bool healthPotionButtonPressed;
     bool manaPotionButtonPressed;
@@ -51,6 +54,8 @@ public class Battle : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        skillAnimationOn = skillAnimations.GetComponent<SkillAnimations>().skillAnimationOn;
+        animationDone = skillAnimations.GetComponent<SkillAnimations>().animationDone;
         specialInUse = false;
         randomizeDone = false;
         doCountdown = false;
@@ -63,6 +68,9 @@ public class Battle : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        skillAnimationOn = skillAnimations.GetComponent<SkillAnimations>().skillAnimationOn;
+        animationDone = skillAnimations.GetComponent<SkillAnimations>().animationDone;
+
         enemy = GameObject.Find("Enemy");
         inBattle = cameras.GetComponent<CameraSwitch>().inBattle;
         if (inBattle)
@@ -216,7 +224,14 @@ public class Battle : MonoBehaviour {
     private void useSpecialSkill()
     {
         buttons.SetActive(false);
-        doCountdown = true;
+        if (skillAnimationOn)
+        {
+            doCountdown = false;
+        }
+        else
+        {
+            doCountdown = true;
+        }
 
         if (countdown >= 4)
         {
@@ -229,11 +244,31 @@ public class Battle : MonoBehaviour {
             special3ButtonPressed = false;
             special4ButtonPressed = false;
             items.GetComponent<ItemMenu>().playerTurn = false;
+            skillAnimations.GetComponent<SkillAnimations>().animationDone = false;
         }
         else if (countdown >= 3 && !actionDone)
         {
             buttons.GetComponent<BattleButtons>().useSpecialSkill();
             actionDone = true;
+        }
+        else if (countdown >= 2 && !animationDone)
+        {
+            if (specialSkill[0].Equals("Fire"))
+            {
+                skillAnimations.GetComponent<SkillAnimations>().fireOnEnemy();
+            }
+            else if (specialSkill[0].Equals("Thunder"))
+            {
+                skillAnimations.GetComponent<SkillAnimations>().thunderOnEnemy();
+            }
+            else if (specialSkill[0].Equals("Ice"))
+            {
+                skillAnimations.GetComponent<SkillAnimations>().iceOnEnemy();
+            }
+            else if (specialSkill[0].Equals("Shotgun"))
+            {
+                skillAnimations.GetComponent<SkillAnimations>().shotgunOnEnemy();
+            }
         }
         else if (countdown >= 1)
         {
@@ -394,7 +429,14 @@ public class Battle : MonoBehaviour {
     private void playerAttack()
     {
         buttons.SetActive(false);
-        doCountdown = true;
+        if (skillAnimationOn)
+        {
+            doCountdown = false;
+        }
+        else
+        {
+            doCountdown = true;
+        }
 
         if (countdown >= 4)
         {
@@ -404,11 +446,16 @@ public class Battle : MonoBehaviour {
             battleLog.SetActive(false);
             attackButtonPressed = false;
             items.GetComponent<ItemMenu>().playerTurn = false;
+            skillAnimations.GetComponent<SkillAnimations>().animationDone = false;
         }
         else if (countdown >= 3 && !actionDone)
         {
             buttons.GetComponent<BattleButtons>().doAttack();
             actionDone = true;
+        }
+        else if(countdown >= 2 && !animationDone)
+        {
+            skillAnimations.GetComponent<SkillAnimations>().hitOnEnemy();
         }
         else if (countdown >= 1)
         {
@@ -425,13 +472,21 @@ public class Battle : MonoBehaviour {
     {
         if(!items.GetComponent<ItemMenu>().playerTurn)
         {
-            doCountdown = true;
+            if (skillAnimationOn)
+            {
+                doCountdown = false;
+            }
+            else
+            {
+                doCountdown = true;
+            }
             buttons.SetActive(false);
 
             if (countdown > 4)
             {
                 doCountdown = false;
                 items.GetComponent<ItemMenu>().playerTurn = true;
+                skillAnimations.GetComponent<SkillAnimations>().animationDone = false;
                 countdown = 0;
                 battleLog.SetActive(false);
                 randomizeDone = false;
@@ -441,6 +496,29 @@ public class Battle : MonoBehaviour {
             {
                 attackPlayer();
                 enemyAttacked = true;
+            }
+            else if(countdown >= 2 && !animationDone)
+            {
+                if(enemySkillName.Equals("Shotgun"))
+                {
+                    skillAnimations.GetComponent<SkillAnimations>().shotgunOnPlayer();
+                }
+                else if (enemySkillName.Equals("Fire"))
+                {
+                    skillAnimations.GetComponent<SkillAnimations>().fireOnPlayer();
+                }
+                else if (enemySkillName.Equals("Thunder"))
+                {
+                    skillAnimations.GetComponent<SkillAnimations>().thunderOnPlayer();
+                }
+                else if (enemySkillName.Equals("Ice"))
+                {
+                    skillAnimations.GetComponent<SkillAnimations>().iceOnPlayer();
+                }
+                else
+                {
+                    skillAnimations.GetComponent<SkillAnimations>().hitOnPlayer();
+                }
             }
             else if (countdown >= 1 && !randomizeDone)
             {
