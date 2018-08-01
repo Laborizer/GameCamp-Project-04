@@ -418,7 +418,7 @@ RectTransform:
   m_LocalScale: {x: 0.19996873, y: 0.1999688, z: 1.0000311}
   m_Children: []
   m_Father: {fileID: 460230048}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -966,7 +966,7 @@ RectTransform:
   m_LocalScale: {x: 0.2, y: 0.2, z: 1.0000311}
   m_Children: []
   m_Father: {fileID: 460230048}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1126,7 +1126,7 @@ RectTransform:
   m_LocalScale: {x: 0.19996873, y: 0.1999688, z: 1.0000311}
   m_Children: []
   m_Father: {fileID: 460230048}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1877,7 +1877,7 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: talk
-      value: This is of endings heres!
+      value: Get ready for zap zap zappin'!
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
@@ -1902,22 +1902,22 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill1Name
-      value: Water Spit
+      value: Stomp
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill2Name
-      value: Water Strike
+      value: Chomp
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill3Name
-      value: Water Wave
+      value: Thunder
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill4Name
-      value: Tsunami
+      value: Thunder
       objectReference: {fileID: 0}
     - target: {fileID: 114308693783620324, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
@@ -1927,7 +1927,7 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: health
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
@@ -2182,7 +2182,7 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: talk
-      value: This is of endings heres!
+      value: Hahaha, you are no match to me!
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
@@ -2207,22 +2207,22 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill1Name
-      value: Water Spit
+      value: Strike
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill2Name
-      value: Water Strike
+      value: Uppercut
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill3Name
-      value: Water Wave
+      value: Smash
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill4Name
-      value: Tsunami
+      value: Hurl
       objectReference: {fileID: 0}
     - target: {fileID: 114308693783620324, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
@@ -2232,7 +2232,7 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: health
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4589074668832458, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2842,7 +2842,7 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: talk
-      value: WTF u doings heres
+      value: Die!
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
@@ -2867,22 +2867,22 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill1Name
-      value: Water Spit
+      value: Kick
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill2Name
-      value: Water Strike
+      value: Punch
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill3Name
-      value: Water Wave
+      value: Sidekick
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill4Name
-      value: Tsunami
+      value: Uppercut
       objectReference: {fileID: 0}
     - target: {fileID: 114308693783620324, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
@@ -3567,6 +3567,39 @@ Transform:
   m_PrefabParentObject: {fileID: 4464078500271420, guid: 3bac96a4e7465cc4abdeb799300d693a,
     type: 2}
   m_PrefabInternal: {fileID: 444225028}
+--- !u!1 &451240255
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 451240256}
+  m_Layer: 0
+  m_Name: EnemySpriteLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &451240256
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 451240255}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 460230048}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 23.7, y: 21.7}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &460230047
 GameObject:
   m_ObjectHideFlags: 0
@@ -3593,6 +3626,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 287078792}
+  - {fileID: 451240256}
   - {fileID: 141682762}
   - {fileID: 35156882}
   - {fileID: 746970197}
@@ -4707,6 +4741,7 @@ MonoBehaviour:
   enemy: {fileID: 0}
   player: {fileID: 750941679}
   battleLog: {fileID: 1600368063}
+  skillAnimations: {fileID: 1418126237}
   inBattle: 0
   cameras: {fileID: 206990814}
   items: {fileID: 246277367}
@@ -5691,7 +5726,7 @@ RectTransform:
   m_LocalScale: {x: 0.19996873, y: 0.1999688, z: 1.0000311}
   m_Children: []
   m_Father: {fileID: 460230048}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8826,7 +8861,7 @@ RectTransform:
   m_LocalScale: {x: 0.19996873, y: 0.1999688, z: 1.0000311}
   m_Children: []
   m_Father: {fileID: 460230048}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9517,7 +9552,7 @@ Prefab:
     - target: {fileID: 114350309535527460, guid: 958ef2cdfb10b4b40b421b48f0e545ca,
         type: 2}
       propertyPath: talk
-      value: Red or Blue?
+      value: Red or Blue pill?
       objectReference: {fileID: 0}
     - target: {fileID: 114701329499136144, guid: 958ef2cdfb10b4b40b421b48f0e545ca,
         type: 2}
@@ -10018,7 +10053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947030332a9aa8f4c9ec37ef545110e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  talk: I is of trash
+  talk: I heard there's a powerful weapon hidden somewhere
 --- !u!61 &944652576
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10120,7 +10155,7 @@ RectTransform:
   m_LocalScale: {x: 0.19996873, y: 0.1999688, z: 1.0000311}
   m_Children: []
   m_Father: {fileID: 460230048}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11934,7 +11969,7 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: talk
-      value: Plz stop
+      value: Are you wanna die?
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
@@ -11959,22 +11994,22 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill1Name
-      value: Waterbubble
+      value: Kick
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill2Name
-      value: Water Spit
+      value: Stomp
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill3Name
-      value: Water Strike
+      value: Punch
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill4Name
-      value: Water Wave
+      value: Karate Chop
       objectReference: {fileID: 0}
     - target: {fileID: 114308693783620324, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
@@ -64529,6 +64564,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1418126238}
+  - component: {fileID: 1418126239}
   m_Layer: 0
   m_Name: Hit Animations
   m_TagString: Untagged
@@ -64559,6 +64595,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1418126239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1418126237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e37dcd2d217effa46828b39f0fa3fc8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundManager: {fileID: 1810940546}
+  fire: {fileID: 13412143}
+  thunder: {fileID: 1782866709}
+  ice: {fileID: 1243275342}
+  shotgun: {fileID: 236437761}
+  hit: {fileID: 760458759}
+  playerSprite: {fileID: 287078791}
+  enemySprite: {fileID: 451240255}
+  skillAnimationOn: 0
+  animationDone: 0
 --- !u!1001 &1423685982
 Prefab:
   m_ObjectHideFlags: 0
@@ -64966,7 +65023,7 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: talk
-      value: This is of endings heres!
+      value: I will burn you alive, son!
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
@@ -64991,22 +65048,22 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill1Name
-      value: Water Spit
+      value: Chomp
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill2Name
-      value: Water Strike
+      value: Stomp
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill3Name
-      value: Water Wave
+      value: Fire
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill4Name
-      value: Tsunami
+      value: Fire
       objectReference: {fileID: 0}
     - target: {fileID: 114308693783620324, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
@@ -66504,6 +66561,11 @@ MonoBehaviour:
   npcTalk: {fileID: 8300000, guid: d471e3ab4f715a34483069b09bd666bc, type: 3}
   potionPickup: {fileID: 8300000, guid: 2e5cdbf7b035b9341ab4b53f36977ea0, type: 3}
   specialLearn: {fileID: 8300000, guid: 767f845be5581944499398bd193aea36, type: 3}
+  shotgun: {fileID: 8300000, guid: 83a6aa914b8718a4586ffd606f509e5e, type: 3}
+  fire: {fileID: 8300000, guid: 88055c041b2071945bfada23833acc67, type: 3}
+  thunder: {fileID: 8300000, guid: 0476fe5c9ec1a7442a9682b015caa664, type: 3}
+  ice: {fileID: 8300000, guid: 8f63420bb50691540a3c8276f813b1c9, type: 3}
+  hit: {fileID: 8300000, guid: 2a5c573b1f213844ebc08a1f32e05013, type: 3}
 --- !u!4 &1810940548
 Transform:
   m_ObjectHideFlags: 0
@@ -66681,6 +66743,31 @@ Prefab:
       propertyPath: m_Constraints
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 114714244869631068, guid: 1861418c7b26d824bbec92e8f58e91a8,
+        type: 2}
+      propertyPath: skill1Name
+      value: Push
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714244869631068, guid: 1861418c7b26d824bbec92e8f58e91a8,
+        type: 2}
+      propertyPath: skill2Name
+      value: Tackle
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714244869631068, guid: 1861418c7b26d824bbec92e8f58e91a8,
+        type: 2}
+      propertyPath: skill3Name
+      value: Stomp
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714244869631068, guid: 1861418c7b26d824bbec92e8f58e91a8,
+        type: 2}
+      propertyPath: skill4Name
+      value: Kick
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714244869631068, guid: 1861418c7b26d824bbec92e8f58e91a8,
+        type: 2}
+      propertyPath: talk
+      value: I will end you!
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 65281167774792370, guid: 1861418c7b26d824bbec92e8f58e91a8, type: 2}
     - {fileID: 65146057813463976, guid: 1861418c7b26d824bbec92e8f58e91a8, type: 2}
@@ -66816,6 +66903,26 @@ Prefab:
         type: 2}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
+        type: 2}
+      propertyPath: skill2Name
+      value: Chop
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
+        type: 2}
+      propertyPath: skill3Name
+      value: Stomp
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
+        type: 2}
+      propertyPath: skill4Name
+      value: Punch
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
+        type: 2}
+      propertyPath: talk
+      value: Get killed!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
@@ -69155,7 +69262,7 @@ RectTransform:
   m_LocalScale: {x: 0.19996873, y: 0.1999688, z: 1.0000311}
   m_Children: []
   m_Father: {fileID: 460230048}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -69286,47 +69393,47 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: talk
-      value: This is of endings heres!
+      value: Say hello to my little friend!
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill4
-      value: 40
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill3
-      value: 30
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill2
-      value: 25
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill1
-      value: 20
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill1Name
-      value: Water Spit
+      value: Shotgun
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill2Name
-      value: Water Strike
+      value: Shotgun
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill3Name
-      value: Water Wave
+      value: Shotgun
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill4Name
-      value: Tsunami
+      value: Shotgun
       objectReference: {fileID: 0}
     - target: {fileID: 114308693783620324, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
@@ -69336,7 +69443,7 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: health
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
@@ -70272,7 +70379,7 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: talk
-      value: This is of endings heres!
+      value: Prepare to get frozen, kid!
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
@@ -70297,22 +70404,22 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill1Name
-      value: Water Spit
+      value: Punch
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill2Name
-      value: Water Strike
+      value: Stomp
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill3Name
-      value: Water Wave
+      value: Ice
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill4Name
-      value: Tsunami
+      value: Ice
       objectReference: {fileID: 0}
     - target: {fileID: 114308693783620324, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
@@ -70322,7 +70429,7 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: health
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
@@ -70890,6 +70997,26 @@ Prefab:
     - target: {fileID: 1166014566635324, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
+        type: 2}
+      propertyPath: skill2Name
+      value: Punch
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
+        type: 2}
+      propertyPath: skill3Name
+      value: Stomp
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
+        type: 2}
+      propertyPath: skill4Name
+      value: Chop
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
+        type: 2}
+      propertyPath: talk
+      value: I will break you!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
