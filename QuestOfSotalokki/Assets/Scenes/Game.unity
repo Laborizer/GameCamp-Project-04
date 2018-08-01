@@ -2238,9 +2238,39 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 212710190485069502, guid: 0c22a0a318cdb574abe0b57b0b683451,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bedb9528aa05d864d93161bef818ad76,
+        type: 3}
+    m_RemovedComponents:
+    - {fileID: 95807814551500330, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &347199172 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1673581803104238, guid: 0c22a0a318cdb574abe0b57b0b683451,
+    type: 2}
+  m_PrefabInternal: {fileID: 347199171}
+--- !u!95 &347199173
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 347199172}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3c344f86c0c0fdc449969313b363d243, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &353385698 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1544192906617420, guid: 08de54d4a26401d4682783a19975e90a,
@@ -8812,7 +8842,7 @@ Animator:
   m_GameObject: {fileID: 746970196}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c7ebe29a4fd03be479aa4121147009ab, type: 2}
+  m_Controller: {fileID: 9100000, guid: a5964d78b0c11ee4bb63ae5aea0b6b75, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -8840,7 +8870,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b25e863ec37df81409ef6011384bdc74, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bedb9528aa05d864d93161bef818ad76, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
