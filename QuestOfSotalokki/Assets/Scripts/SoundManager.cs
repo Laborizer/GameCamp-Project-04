@@ -5,6 +5,7 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour {
 
     AudioSource audiosource;
+    float randomVolume;
 
     public GameObject overworldTheme;
     public GameObject battleTheme;
@@ -14,6 +15,8 @@ public class SoundManager : MonoBehaviour {
     public AudioClip npcTalk;
     public AudioClip potionPickup;
     public AudioClip specialLearn;
+    public AudioClip walk;
+    public AudioClip gulp;
 
     public AudioClip shotgun;
     public AudioClip fire;
@@ -24,6 +27,7 @@ public class SoundManager : MonoBehaviour {
     private void Start()
     {
         audiosource = GetComponent<AudioSource>();
+        randomVolume = 0;
     }
 
     public void overworldThemePlay()
@@ -57,6 +61,19 @@ public class SoundManager : MonoBehaviour {
     public void specialLearnPlay()
     {
         audiosource.PlayOneShot(specialLearn, 3f);
+    }
+    public void walkPlay()
+    {
+        if(!audiosource.isPlaying)
+        {
+            randomVolume = Random.Range(5.5f, 6f);
+            audiosource.pitch = Random.Range(0.8f, 1.1f);
+            audiosource.PlayOneShot(walk, randomVolume);
+        }
+    }
+    public void potionDrinkPlay()
+    {
+        audiosource.PlayOneShot(gulp, 15f);
     }
 
     // skill sound effects

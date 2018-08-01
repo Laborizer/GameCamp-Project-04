@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 
 public class ItemMenu : MonoBehaviour {
+    public GameObject soundManager;
 
     public Button healthPotionButton;
     public Button manaPotionButton;
@@ -18,6 +19,7 @@ public class ItemMenu : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         player = GameObject.Find("Player");
+        soundManager = GameObject.Find("SoundManager");
         playerTurn = true;
     }
 	
@@ -33,7 +35,8 @@ public class ItemMenu : MonoBehaviour {
     {
         player.GetComponent<Player>().healtPotionCount--;
         player.GetComponent<Player>().health = player.GetComponent<Player>().health + 50;
-        if(player.GetComponent<Player>().health > 100)
+        soundManager.GetComponent<SoundManager>().potionDrinkPlay();
+        if (player.GetComponent<Player>().health > 100)
         {
             player.GetComponent<Player>().health = 100;
         }
@@ -42,6 +45,7 @@ public class ItemMenu : MonoBehaviour {
     {
         player.GetComponent<Player>().manaPotionCount--;
         player.GetComponent<Player>().mana = player.GetComponent<Player>().mana + 50;
+        soundManager.GetComponent<SoundManager>().potionDrinkPlay();
         if (player.GetComponent<Player>().mana > 100)
         {
             player.GetComponent<Player>().mana = 100;
@@ -51,11 +55,13 @@ public class ItemMenu : MonoBehaviour {
     {
         player.GetComponent<Player>().attackPotionCount--;
         player.GetComponent<Player>().attackDamage = player.GetComponent<Player>().attackDamage * 2f;
+        soundManager.GetComponent<SoundManager>().potionDrinkPlay();
     }
     public void useDefensePotion()
     {
         player.GetComponent<Player>().defensePotionCount--;
         player.GetComponent<Player>().defense = player.GetComponent<Player>().defense + 10;
+        soundManager.GetComponent<SoundManager>().potionDrinkPlay();
     }
 
     public void disablePlayerTurn()
