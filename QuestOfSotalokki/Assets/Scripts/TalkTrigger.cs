@@ -86,6 +86,10 @@ public class TalkTrigger : MonoBehaviour {
             {
                 Enemy = GameObject.Find("Enemy");
                 Enemy.GetComponent<Enemy>().giveName(enemyName);
+            } else if (enemyName == "EnemySnake")
+            {
+                Enemy = GameObject.Find("Enemy");
+                Enemy.GetComponent<Enemy>().giveName(enemyName);
             }
         }
 

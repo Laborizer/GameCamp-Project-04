@@ -21,6 +21,7 @@ public class Battle : MonoBehaviour {
 
     public GameObject EnemyELP;
     public GameObject EnemyGIF;
+    public GameObject EnemySnake;
     public GameObject FireBoss;
     public GameObject IceBoss;
     public GameObject ThunderBoss;
@@ -79,6 +80,7 @@ public class Battle : MonoBehaviour {
             if (enemy.GetComponent<Enemy>().getRealName() == "EnemyELP")
             {
                 EnemyELP.gameObject.SetActive(true);
+                EnemySnake.gameObject.SetActive(false);
                 EnemyGIF.gameObject.SetActive(false);
                 FireBoss.gameObject.SetActive(false);
                 IceBoss.gameObject.SetActive(false);
@@ -88,6 +90,7 @@ public class Battle : MonoBehaviour {
             } else if (enemy.GetComponent<Enemy>().getRealName() == "EnemyGIF")
             {
                 EnemyELP.gameObject.SetActive(false);
+                EnemySnake.gameObject.SetActive(false);
                 EnemyGIF.gameObject.SetActive(true);
                 FireBoss.gameObject.SetActive(false);
                 IceBoss.gameObject.SetActive(false);
@@ -97,6 +100,7 @@ public class Battle : MonoBehaviour {
             } else if (enemy.GetComponent<Enemy>().getRealName() == "FinalBoss")
             {
                 EnemyELP.gameObject.SetActive(false);
+                EnemySnake.gameObject.SetActive(false);
                 EnemyGIF.gameObject.SetActive(false);
                 FireBoss.gameObject.SetActive(false);
                 IceBoss.gameObject.SetActive(false);
@@ -106,6 +110,7 @@ public class Battle : MonoBehaviour {
             } else if (enemy.GetComponent<Enemy>().getRealName() == "FireBoss")
             {
                 EnemyELP.gameObject.SetActive(false);
+                EnemySnake.gameObject.SetActive(false);
                 EnemyGIF.gameObject.SetActive(false);
                 FireBoss.gameObject.SetActive(true);
                 IceBoss.gameObject.SetActive(false);
@@ -115,6 +120,7 @@ public class Battle : MonoBehaviour {
             } else if (enemy.GetComponent<Enemy>().getRealName() == "IceBoss")
             {
                 EnemyELP.gameObject.SetActive(false);
+                EnemySnake.gameObject.SetActive(false);
                 EnemyGIF.gameObject.SetActive(false);
                 FireBoss.gameObject.SetActive(false);
                 IceBoss.gameObject.SetActive(true);
@@ -124,6 +130,7 @@ public class Battle : MonoBehaviour {
             } else if (enemy.GetComponent<Enemy>().getRealName() == "ThunderBoss")
             {
                 EnemyELP.gameObject.SetActive(false);
+                EnemySnake.gameObject.SetActive(false);
                 EnemyGIF.gameObject.SetActive(false);
                 FireBoss.gameObject.SetActive(false);
                 IceBoss.gameObject.SetActive(false);
@@ -133,13 +140,26 @@ public class Battle : MonoBehaviour {
             } else if (enemy.GetComponent<Enemy>().getRealName() == "ShotgunBoss")
             {
                 EnemyELP.gameObject.SetActive(false);
+                EnemySnake.gameObject.SetActive(false);
                 EnemyGIF.gameObject.SetActive(false);
                 FireBoss.gameObject.SetActive(false);
                 IceBoss.gameObject.SetActive(false);
                 ThunderBoss.gameObject.SetActive(false);
                 ShotgunBoss.gameObject.SetActive(true);
                 FinalBoss.gameObject.SetActive(false);
+            } else if (enemy.GetComponent<Enemy>().getRealName() == "EnemySnake")
+            {
+                EnemyELP.gameObject.SetActive(false);
+                EnemySnake.gameObject.SetActive(true);
+                EnemyGIF.gameObject.SetActive(false);
+                FireBoss.gameObject.SetActive(false);
+                IceBoss.gameObject.SetActive(false);
+                ThunderBoss.gameObject.SetActive(false);
+                ShotgunBoss.gameObject.SetActive(false);
+                FinalBoss.gameObject.SetActive(false);
             }
+
+            Debug.Log("asd" + enemy.GetComponent<Enemy>().getRealName());
 
             if (enemy.GetComponent<Enemy>().health <= 0 && countdown == 0)
             {
