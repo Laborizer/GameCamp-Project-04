@@ -15,9 +15,4 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
     }
-
-    public void GoToOptions()
-    {
-        SceneManager.LoadScene("Options");
-    }
 }

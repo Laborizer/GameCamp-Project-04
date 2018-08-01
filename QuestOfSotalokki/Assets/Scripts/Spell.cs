@@ -17,7 +17,7 @@ public class Spell : MonoBehaviour {
         soundManager = GameObject.Find("SoundManager");
     }
 
-    private void OnTriggerEnter(Collider col)
+    private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.name == "Player")
         {

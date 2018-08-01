@@ -26,7 +26,7 @@ public class Player : MonoBehaviour {
     // int.Parse(special1[1]);
     //String[] frostExplosion = new string[3];
 
-    private Rigidbody rb;
+    private Rigidbody2D rb;
     private Vector3 moveInput;
     private Vector3 moveVelocity;
     private Boolean canMove;
@@ -34,9 +34,12 @@ public class Player : MonoBehaviour {
     public GameObject dialogueBox;
     public TextMeshProUGUI text;
 
+    public bool itemGet = false;
+    bool inBattle = false;
+
     void Start () {
         canMove = true;
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
         attackDamage = 20;
         defense = 0;
     }
@@ -47,21 +50,32 @@ public class Player : MonoBehaviour {
         {
             Move();
         }
-        if (Input.GetKeyDown(KeyCode.E) && dialogueBox.activeSelf)
+        if (Input.GetKeyDown(KeyCode.E) && itemGet)
         {
             dialogueBox.SetActive(false);
             setMove(true);
+            itemGet = false;
         }
+        if (inBattle)
+        {
+            dialogueBox.SetActive(false);
+        }
+    }
+
+    internal void setBattle(bool result)
+    {
+        inBattle = result;
     }
 
     public void Die()
     {
+        dialogueBox.SetActive(false);
         this.gameObject.SetActive(false);
     }
 
     private void Move()
     {
-        moveInput = new Vector3(Input.GetAxisRaw("Horizontal"),0f, Input.GetAxisRaw("Vertical"));
+        moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0f);
         moveVelocity = moveInput * moveSpeed;
         rb.velocity = moveVelocity;
     }
@@ -93,6 +107,7 @@ public class Player : MonoBehaviour {
         dialogueBox.SetActive(true);
         text.text = "You is gettings new " + name;
         setMove(false);
+        itemGet = true;
     }
 
     internal void setMove(bool result)
@@ -135,10 +150,11 @@ public class Player : MonoBehaviour {
         dialogueBox.SetActive(true);
         text.text = infotext;
         setMove(false);
+        itemGet = true;
     }
 
     internal void startPos()
     {
-        transform.position = new Vector3(0,0,0);
+        transform.position = new Vector3(0,140,0);
     }
 }

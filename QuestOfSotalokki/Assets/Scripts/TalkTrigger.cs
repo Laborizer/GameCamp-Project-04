@@ -11,17 +11,47 @@ public class TalkTrigger : MonoBehaviour {
     public GameObject dialogueBox;
     public GameObject Buttons;
     public GameObject Enemy;
+    public GameObject Player;
     public TextMeshProUGUI text;
     public string enemyName;
-    private bool isTalking;
+    public bool isTalkingNPC = false;
+    public bool isTalkingEnemy = false;
+    public bool hasPlayed = false;
+    public float timer;
 
     private void Start()
     {
-        isTalking = false;
         soundManager = GameObject.Find("SoundManager");
+        Player = GameObject.Find("Player");
+        timer = 0.5f;
     }
 
-    private void OnTriggerStay(Collider col)
+    private void Update()
+    {
+        if (isTalkingEnemy)
+        {
+            transform.parent.GetComponent<Enemy>().SetWalk(false);
+            timer -= Time.deltaTime;
+            if (Input.GetKeyDown(KeyCode.E) && timer <= 0F)
+            {
+                dialogueBox.SetActive(false);
+                transform.parent.GetComponent<Enemy>().SetBattle(true);
+                Player.GetComponent<Player>().setBattle(true);
+                isTalkingEnemy = false;
+            }
+        }
+
+        if (isTalkingNPC)
+        {
+            if (!dialogueBox.activeSelf && Input.GetKeyDown(KeyCode.E))
+            {
+                dialogueBox.SetActive(true);
+                soundManager.GetComponent<SoundManager>().npcTalkPlay();
+            }
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D col)
     {
         if (col.gameObject.tag == "PlayerTag" && this.gameObject.tag != "NPC")
         {
@@ -59,58 +89,36 @@ public class TalkTrigger : MonoBehaviour {
             }
         }
 
-        if (col.gameObject.tag == "PlayerTag" && Input.GetKeyDown(KeyCode.E) && this.gameObject.tag == "Enemy")
+        if (col.gameObject.tag == "PlayerTag" && this.gameObject.tag == "Enemy" && !isTalkingEnemy)
         {
-            if(!isTalking)
+            if (!hasPlayed)
             {
-                dialogueBox.SetActive(true);
-                isTalking = true;
+                soundManager.GetComponent<SoundManager>().enemyTalkPlay();
+                hasPlayed = true;
             }
-            else
-            {
-                dialogueBox.SetActive(false);
-                transform.parent.GetComponent<Enemy>().SetBattle(true);
-            }
-        }
-
-        if (col.gameObject.tag == "PlayerTag" && this.gameObject.tag == "Enemy" && !isTalking)
-        {
-            soundManager.GetComponent<SoundManager>().enemyTalkPlay();
             text.text = transform.parent.GetComponent<Enemy>().getName() + ":\n" + transform.parent.GetComponent<Enemy>().getText();
             dialogueBox.SetActive(true);
-            transform.parent.GetComponent<Enemy>().SetWalk(false);
-            isTalking = true;
+            isTalkingEnemy = true;
         }
 
-        if (col.gameObject.tag == "PlayerTag" && Input.GetKeyDown(KeyCode.E) && this.gameObject.tag == "NPC")
+        if (col.gameObject.tag == "PlayerTag" && this.gameObject.tag == "NPC")
         {
-            soundManager.GetComponent<SoundManager>().npcTalkPlay();
             text.text = transform.parent.GetComponent<NPC>().getName() + ":\n" + transform.parent.GetComponent<NPC>().getText();
-
             if (transform.parent.GetComponent<NPC>().getName() == "NPCStart")
             {
                 Buttons.SetActive(true);
             }
-
-            if (!isTalking)
-            {
-                isTalking = true;
-                dialogueBox.SetActive(true);
-            }
-            else
-            {
-                isTalking = false;
-                dialogueBox.SetActive(false);
-            }
+            isTalkingNPC = true;
         }
     }
 
-    private void OnTriggerExit(Collider col)
+    private void OnTriggerExit2D(Collider2D col)
     {
         if (col.gameObject.tag == "PlayerTag" && this.gameObject.tag == "Enemy")
         {
             transform.parent.GetComponent<Enemy>().SetBattle(false);
             dialogueBox.SetActive(false);
+            isTalkingEnemy = false;
         }
         else if (col.gameObject.tag == "PlayerTag" && this.gameObject.tag == "NPC")
         {
@@ -119,7 +127,7 @@ public class TalkTrigger : MonoBehaviour {
                 Buttons.SetActive(false);
             }
             dialogueBox.SetActive(false);
-            isTalking = false;
+            isTalkingNPC = false;
         }
     }
 }

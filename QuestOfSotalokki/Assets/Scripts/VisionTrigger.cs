@@ -13,7 +13,7 @@ public class VisionTrigger : MonoBehaviour {
         player = GameObject.Find("Player");
     }
 
-    private void OnTriggerEnter(Collider col)
+    private void OnTriggerEnter2D(Collider2D col)
     {
         if(col.gameObject.tag == "PlayerTag")
         {
@@ -22,7 +22,7 @@ public class VisionTrigger : MonoBehaviour {
         }
     }
 
-    private void OnTriggerExit(Collider col)
+    private void OnTriggerExit2D(Collider2D col)
     {
         if (col.gameObject.tag == "PlayerTag")
         {

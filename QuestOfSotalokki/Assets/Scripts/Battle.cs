@@ -65,10 +65,9 @@ public class Battle : MonoBehaviour {
 	void Update () {
         enemy = GameObject.Find("Enemy");
         inBattle = cameras.GetComponent<CameraSwitch>().inBattle;
-
         if (inBattle)
         {
-
+            player.GetComponent<Player>().setMove(false);
             if (enemy.GetComponent<Enemy>().getRealName() == "EnemyELP")
             {
                 EnemyELP.gameObject.SetActive(true);
@@ -142,6 +141,7 @@ public class Battle : MonoBehaviour {
                     GameWin = true;
                 }
                 enemy.GetComponent<Enemy>().SetBattle(false);
+                player.GetComponent<Player>().setBattle(false);
                 enemy.GetComponent<Enemy>().gameObject.SetActive(false);
                 player.GetComponent<Player>().setMove(true);
             }
