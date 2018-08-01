@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraSwitch : MonoBehaviour {
+    GameObject soundManager;
 
     public bool inBattle;
 
@@ -12,6 +13,7 @@ public class CameraSwitch : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        soundManager = GameObject.Find("SoundManager");
         inBattle = false;
         overworldCam.enabled = true;
         battleCam.enabled = false;
@@ -28,11 +30,13 @@ public class CameraSwitch : MonoBehaviour {
         {
             overworldCam.enabled = false;
             battleCam.enabled = true;
+            soundManager.GetComponent<SoundManager>().battleThemePlay();
         }
         else
         {
             overworldCam.enabled = true;
             battleCam.enabled = false;
+            soundManager.GetComponent<SoundManager>().overworldThemePlay();
         }
     }
 
