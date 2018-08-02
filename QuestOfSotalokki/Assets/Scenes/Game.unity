@@ -31875,6 +31875,7 @@ MonoBehaviour:
   moveSpeed: 2.5
   attackDamage: 0
   defense: 0
+  damageMultiplier: 0
   healtPotionCount: 0
   manaPotionCount: 0
   attackPotionCount: 0
@@ -104655,7 +104656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947030332a9aa8f4c9ec37ef545110e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  talk: I'm not a wizzard
+  talk: I'm not a wizard
 --- !u!212 &1741081961
 SpriteRenderer:
   m_ObjectHideFlags: 0
