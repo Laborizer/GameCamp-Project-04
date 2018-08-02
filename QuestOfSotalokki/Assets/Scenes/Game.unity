@@ -778,6 +778,11 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 61169269}
+--- !u!4 &86959011 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4817239099982814, guid: 59b3f837a69875f42a73d46a0d326d23,
+    type: 2}
+  m_PrefabInternal: {fileID: 2051449522}
 --- !u!4 &102616425 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4464078500271420, guid: 3bac96a4e7465cc4abdeb799300d693a,
@@ -15519,22 +15524,22 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill4
-      value: 40
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill3
-      value: 30
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill2
-      value: 25
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill1
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
@@ -15918,17 +15923,17 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill4
-      value: 40
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill3
-      value: 30
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill2
-      value: 25
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
@@ -15938,7 +15943,7 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill1Name
-      value: Strike
+      value: Karate Chop
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
@@ -15948,12 +15953,12 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill3Name
-      value: Smash
+      value: Hurl
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill4Name
-      value: Hurl
+      value: Mega strike
       objectReference: {fileID: 0}
     - target: {fileID: 114308693783620324, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
@@ -15963,7 +15968,7 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: health
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4589074668832458, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -15975,6 +15980,11 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: bedb9528aa05d864d93161bef818ad76,
         type: 3}
+    - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
+        type: 2}
+      propertyPath: weakness
+      value: Shotgun
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 95807814551500330, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
@@ -16254,7 +16264,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0.3866549, y: 0, z: 0.2585311, w: 0}
   m_textInfo:
     textComponent: {fileID: 366018222}
     characterCount: 0
@@ -17370,6 +17380,7 @@ Transform:
   - {fileID: 2089335474}
   - {fileID: 1322445434}
   - {fileID: 2060885966}
+  - {fileID: 86959011}
   m_Father: {fileID: 1275278663}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17772,7 +17783,7 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 1861418c7b26d824bbec92e8f58e91a8,
         type: 2}
       propertyPath: skill3Name
-      value: Stomp
+      value: Headbutt
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 1861418c7b26d824bbec92e8f58e91a8,
         type: 2}
@@ -17787,6 +17798,21 @@ Prefab:
     - target: {fileID: 1673581803104238, guid: 1861418c7b26d824bbec92e8f58e91a8, type: 2}
       propertyPath: m_Name
       value: EnemyGIF
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714244869631068, guid: 1861418c7b26d824bbec92e8f58e91a8,
+        type: 2}
+      propertyPath: skill1
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714244869631068, guid: 1861418c7b26d824bbec92e8f58e91a8,
+        type: 2}
+      propertyPath: skill3
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714244869631068, guid: 1861418c7b26d824bbec92e8f58e91a8,
+        type: 2}
+      propertyPath: skill4
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 65281167774792370, guid: 1861418c7b26d824bbec92e8f58e91a8, type: 2}
@@ -19119,12 +19145,12 @@ Prefab:
     - target: {fileID: 114235859031672010, guid: 08de54d4a26401d4682783a19975e90a,
         type: 2}
       propertyPath: SpellInfo.Array.data[1]
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114235859031672010, guid: 08de54d4a26401d4682783a19975e90a,
         type: 2}
       propertyPath: SpellInfo.Array.data[2]
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4184506695161756, guid: 08de54d4a26401d4682783a19975e90a, type: 2}
       propertyPath: m_LocalScale.x
@@ -31263,7 +31289,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1680955047485362, guid: 958ef2cdfb10b4b40b421b48f0e545ca, type: 2}
       propertyPath: m_Name
-      value: NPCStart
+      value: Mysterious Cat
       objectReference: {fileID: 0}
     - target: {fileID: 114701329499136144, guid: 958ef2cdfb10b4b40b421b48f0e545ca,
         type: 2}
@@ -31742,7 +31768,7 @@ GameObject:
   - component: {fileID: 944652574}
   - component: {fileID: 944652576}
   m_Layer: 0
-  m_Name: NPCTest
+  m_Name: Sebastian
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49857,32 +49883,32 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill1
-      value: 15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill2
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill3
-      value: 30
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill4
-      value: 35
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill1Name
-      value: Kick
+      value: Tackle
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill2Name
-      value: Stomp
+      value: Kick
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
@@ -49892,7 +49918,7 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill4Name
-      value: Karate Chop
+      value: Stomp
       objectReference: {fileID: 0}
     - target: {fileID: 114308693783620324, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
@@ -97460,7 +97486,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 29.5, y: -4.7}
+  m_AnchoredPosition: {x: 27.01, y: -5.7}
   m_SizeDelta: {x: 30, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1488301062
@@ -97483,7 +97509,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
-    m_HighlightedColor: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.61960787, b: 0.61960787, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -97791,7 +97817,7 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill3
-      value: 30
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
@@ -99497,7 +99523,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4589074668832458, guid: 1861418c7b26d824bbec92e8f58e91a8, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1.41
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4589074668832458, guid: 1861418c7b26d824bbec92e8f58e91a8, type: 2}
       propertyPath: m_LocalPosition.y
@@ -99568,7 +99594,7 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 1861418c7b26d824bbec92e8f58e91a8,
         type: 2}
       propertyPath: skill3Name
-      value: Stomp
+      value: Headbutt
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 1861418c7b26d824bbec92e8f58e91a8,
         type: 2}
@@ -99579,6 +99605,26 @@ Prefab:
         type: 2}
       propertyPath: talk
       value: I will end you!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714244869631068, guid: 1861418c7b26d824bbec92e8f58e91a8,
+        type: 2}
+      propertyPath: health
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714244869631068, guid: 1861418c7b26d824bbec92e8f58e91a8,
+        type: 2}
+      propertyPath: skill2
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714244869631068, guid: 1861418c7b26d824bbec92e8f58e91a8,
+        type: 2}
+      propertyPath: skill3
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714244869631068, guid: 1861418c7b26d824bbec92e8f58e91a8,
+        type: 2}
+      propertyPath: skill4
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 65281167774792370, guid: 1861418c7b26d824bbec92e8f58e91a8, type: 2}
@@ -99670,7 +99716,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4589074668832458, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 34.76
+      value: 34.93
       objectReference: {fileID: 0}
     - target: {fileID: 4589074668832458, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
       propertyPath: m_LocalPosition.z
@@ -99724,12 +99770,12 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill3Name
-      value: Stomp
+      value: Whip
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill4Name
-      value: Punch
+      value: Bite
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
@@ -99750,6 +99796,16 @@ Prefab:
         type: 2}
       propertyPath: m_Offset.x
       value: -1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
+        type: 2}
+      propertyPath: skill4
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
+        type: 2}
+      propertyPath: health
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 95807814551500330, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
@@ -102024,11 +102080,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4589074668832458, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 25.9
+      value: 24.85
       objectReference: {fileID: 0}
     - target: {fileID: 4589074668832458, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 42.71
+      value: 43.44
       objectReference: {fileID: 0}
     - target: {fileID: 4589074668832458, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
       propertyPath: m_LocalPosition.z
@@ -102082,12 +102138,12 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill3Name
-      value: Stomp
+      value: Whip
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill4Name
-      value: Punch
+      value: Bite
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
@@ -102108,6 +102164,11 @@ Prefab:
         type: 2}
       propertyPath: m_Offset.x
       value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
+        type: 2}
+      propertyPath: skill4
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 95807814551500330, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}
@@ -102404,7 +102465,7 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: weakness
-      value: Shotgun
+      value: Thunder
       objectReference: {fileID: 0}
     - target: {fileID: 212710190485069502, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
@@ -102862,7 +102923,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -27.4, y: -4.9}
+  m_AnchoredPosition: {x: -27.4, y: -5.7}
   m_SizeDelta: {x: 30, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1998519473
@@ -102885,7 +102946,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
-    m_HighlightedColor: {r: 0.79607844, g: 0.79607844, b: 0.79607844, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.6179246, b: 0.6179246, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -103084,12 +103145,12 @@ Prefab:
     - target: {fileID: 114235859031672010, guid: 08de54d4a26401d4682783a19975e90a,
         type: 2}
       propertyPath: SpellInfo.Array.data[1]
-      value: 30
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 114235859031672010, guid: 08de54d4a26401d4682783a19975e90a,
         type: 2}
       propertyPath: SpellInfo.Array.data[2]
-      value: 20
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 212774100740155338, guid: 08de54d4a26401d4682783a19975e90a,
         type: 2}
@@ -103287,6 +103348,73 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2049560561}
+--- !u!1001 &2051449522
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 482434173}
+    m_Modifications:
+    - target: {fileID: 4817239099982814, guid: 59b3f837a69875f42a73d46a0d326d23, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 25.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817239099982814, guid: 59b3f837a69875f42a73d46a0d326d23, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -12.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817239099982814, guid: 59b3f837a69875f42a73d46a0d326d23, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817239099982814, guid: 59b3f837a69875f42a73d46a0d326d23, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817239099982814, guid: 59b3f837a69875f42a73d46a0d326d23, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817239099982814, guid: 59b3f837a69875f42a73d46a0d326d23, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817239099982814, guid: 59b3f837a69875f42a73d46a0d326d23, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817239099982814, guid: 59b3f837a69875f42a73d46a0d326d23, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817239099982814, guid: 59b3f837a69875f42a73d46a0d326d23, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817239099982814, guid: 59b3f837a69875f42a73d46a0d326d23, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817239099982814, guid: 59b3f837a69875f42a73d46a0d326d23, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1594548023949704, guid: 59b3f837a69875f42a73d46a0d326d23, type: 2}
+      propertyPath: m_Name
+      value: HealtPotion
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817239099982814, guid: 59b3f837a69875f42a73d46a0d326d23, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212817008808538640, guid: 59b3f837a69875f42a73d46a0d326d23,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 59b3f837a69875f42a73d46a0d326d23, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &2060885965
 Prefab:
   m_ObjectHideFlags: 0
@@ -103432,7 +103560,7 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill4
-      value: 40
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
@@ -103442,12 +103570,12 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill2
-      value: 25
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill1
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
@@ -104050,17 +104178,17 @@ Prefab:
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill2Name
-      value: Punch
+      value: Slap
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill3Name
-      value: Stomp
+      value: Punch
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
       propertyPath: skill4Name
-      value: Chop
+      value: Stomp
       objectReference: {fileID: 0}
     - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
         type: 2}
@@ -104086,6 +104214,26 @@ Prefab:
         type: 2}
       propertyPath: m_Size.x
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
+        type: 2}
+      propertyPath: skill3
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
+        type: 2}
+      propertyPath: skill4
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
+        type: 2}
+      propertyPath: skill1
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714244869631068, guid: 0c22a0a318cdb574abe0b57b0b683451,
+        type: 2}
+      propertyPath: skill2
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c22a0a318cdb574abe0b57b0b683451, type: 2}

@@ -108,7 +108,7 @@ public class TalkTrigger : MonoBehaviour {
         if (col.gameObject.tag == "PlayerTag" && this.gameObject.tag == "NPC")
         {
             text.text = transform.parent.GetComponent<NPC>().getName() + ":\n" + transform.parent.GetComponent<NPC>().getText();
-            if (transform.parent.GetComponent<NPC>().getName() == "NPCStart")
+            if (transform.parent.GetComponent<NPC>().getName() == "Mysterious Cat")
             {
                 Buttons.SetActive(true);
             }
@@ -126,7 +126,7 @@ public class TalkTrigger : MonoBehaviour {
         }
         else if (col.gameObject.tag == "PlayerTag" && this.gameObject.tag == "NPC")
         {
-            if (transform.parent.GetComponent<NPC>().getName() == "NPCStart")
+            if (transform.parent.GetComponent<NPC>().getName() == "Mysterious Cat")
             {
                 Buttons.SetActive(false);
             }
