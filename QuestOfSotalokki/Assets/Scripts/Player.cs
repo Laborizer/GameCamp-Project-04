@@ -108,7 +108,7 @@ public class Player : MonoBehaviour {
         }
 
         dialogueBox.SetActive(true);
-        text.text = "You is gettings new " + name;
+        text.text = "You found a new " + name;
         setMove(false);
         itemGet = true;
     }
@@ -128,27 +128,22 @@ public class Player : MonoBehaviour {
         if (special1[0].Equals(""))
         {
             special1 = spellInfo;
-            infotext = "You is leaned " + spellInfo[0];
+            infotext = "You have learned " + spellInfo[0];
         }
         else if (special2[0].Equals(""))
         {
             special2 = spellInfo;
-            infotext = "You is leaned " + spellInfo[0];
+            infotext = "You have learned " + spellInfo[0];
         }
         else if (special3[0].Equals(""))
         {
             special3 = spellInfo;
-            infotext = "You is leaned " + spellInfo[0];
+            infotext = "You have learned " + spellInfo[0];
         }
         else if (special4[0].Equals(""))
         {
             special4 = spellInfo;
-            infotext = "You is leaned " + spellInfo[0];
-        }
-        else
-        {
-            // does something
-            infotext = "You is of learned nothings new";
+            infotext = "You have learned " + spellInfo[0];
         }
         dialogueBox.SetActive(true);
         text.text = infotext;
