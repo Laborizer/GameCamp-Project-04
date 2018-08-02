@@ -34,7 +34,7 @@ public class ItemMenu : MonoBehaviour {
     public void useHealthPotion()
     {
         player.GetComponent<Player>().healtPotionCount--;
-        player.GetComponent<Player>().health = player.GetComponent<Player>().health + 50;
+        player.GetComponent<Player>().health = player.GetComponent<Player>().health + 100;
         soundManager.GetComponent<SoundManager>().potionDrinkPlay();
         if (player.GetComponent<Player>().health > 100)
         {
@@ -44,7 +44,7 @@ public class ItemMenu : MonoBehaviour {
     public void useManaPotion()
     {
         player.GetComponent<Player>().manaPotionCount--;
-        player.GetComponent<Player>().mana = player.GetComponent<Player>().mana + 50;
+        player.GetComponent<Player>().mana = player.GetComponent<Player>().mana + 100;
         soundManager.GetComponent<SoundManager>().potionDrinkPlay();
         if (player.GetComponent<Player>().mana > 100)
         {
