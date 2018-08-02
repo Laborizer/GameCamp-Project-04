@@ -12,6 +12,8 @@ public class Player : MonoBehaviour {
     public float attackDamage;
     public float defense;
 
+    public float damageMultiplier;
+
     public int healtPotionCount;
     public int manaPotionCount;
 
@@ -38,6 +40,7 @@ public class Player : MonoBehaviour {
     bool inBattle = false;
 
     void Start () {
+        damageMultiplier = 1;
         canMove = true;
         rb = GetComponent<Rigidbody2D>();
         attackDamage = 20;

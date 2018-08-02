@@ -54,7 +54,7 @@ public class ItemMenu : MonoBehaviour {
     public void useAttackPotion()
     {
         player.GetComponent<Player>().attackPotionCount--;
-        player.GetComponent<Player>().attackDamage = player.GetComponent<Player>().attackDamage * 2f;
+        player.GetComponent<Player>().damageMultiplier = player.GetComponent<Player>().damageMultiplier + 1;
         soundManager.GetComponent<SoundManager>().potionDrinkPlay();
     }
     public void useDefensePotion()

@@ -41,7 +41,7 @@ public class BattleButtons : MonoBehaviour {
     {
         if (enemy != null)
         {
-            enemy.GetComponent<Enemy>().health = enemy.GetComponent<Enemy>().health - player.GetComponent<Player>().attackDamage;
+            enemy.GetComponent<Enemy>().health = enemy.GetComponent<Enemy>().health - (player.GetComponent<Player>().attackDamage * player.GetComponent<Player>().damageMultiplier);
             if(enemy.GetComponent<Enemy>().health < 0)
             {
                 enemy.GetComponent<Enemy>().health = 0;
@@ -55,13 +55,13 @@ public class BattleButtons : MonoBehaviour {
             // Weakness to used skill
             if(enemy.GetComponent<Enemy>().weakness.Equals(battle.GetComponent<Battle>().specialSkill[0]))
             {
-                enemy.GetComponent<Enemy>().health = enemy.GetComponent<Enemy>().health - (int.Parse(battle.GetComponent<Battle>().specialSkill[1]) * 2);
+                enemy.GetComponent<Enemy>().health = enemy.GetComponent<Enemy>().health - (int.Parse(battle.GetComponent<Battle>().specialSkill[1]) * 2 * player.GetComponent<Player>().damageMultiplier);
                 player.GetComponent<Player>().mana = player.GetComponent<Player>().mana - int.Parse(battle.GetComponent<Battle>().specialSkill[2]);
             }
             // No weakness to used skill
             else
             {
-                enemy.GetComponent<Enemy>().health = enemy.GetComponent<Enemy>().health - int.Parse(battle.GetComponent<Battle>().specialSkill[1]);
+                enemy.GetComponent<Enemy>().health = enemy.GetComponent<Enemy>().health - (int.Parse(battle.GetComponent<Battle>().specialSkill[1]) * player.GetComponent<Player>().damageMultiplier);
                 player.GetComponent<Player>().mana = player.GetComponent<Player>().mana - int.Parse(battle.GetComponent<Battle>().specialSkill[2]);
             }
 
